@@ -9,5 +9,5 @@ git clone https://github.com/deanboole/provision.git
 
 mv provision/tmux.conf /root/tmux.conf
 
-pip install virtualenv pymongo
+pip install virtualenv pymongo flask
 
