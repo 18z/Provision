@@ -13,7 +13,7 @@ apt-get install -y vim git tig python-dev python-pip tmux mongodb
 git clone https://github.com/deanboole/provision.git
 mv provision/.tmux.conf /root/
 mv provision/.gitconfig /root/
-mv provision/.vimrc /root/
+mv provision/.vimrc /etc/vim/vimrc
 
 
 # pip install virtualenv pymongo flask
