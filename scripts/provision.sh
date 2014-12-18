@@ -16,6 +16,8 @@ mv ../.gitconfig /etc/gitconfig
 mv ../.vimrc /etc/vim/vimrc
 mv ../.bashrc /etc/bash.bashrc
 
+# Install vim plugin
+vim +PluginInstall +qall
 
 # pip install virtualenv pymongo flask
 
