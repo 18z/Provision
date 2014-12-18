@@ -11,7 +11,7 @@ apt-get install -y vim git tig python-dev python-pip tmux mongodb
 
 # Get and install files
 git clone https://github.com/deanboole/provision.git
-mv provision/.tmux.conf /root/
+mv provision/.tmux.conf ${HOME}
 mv provision/.gitconfig /etc/gitconfig
 mv provision/.vimrc /etc/vim/vimrc
 mv provision/.bashrc /etc/bash.bashrc
