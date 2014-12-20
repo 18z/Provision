@@ -9,8 +9,9 @@ set -x
 apt-get update
 apt-get install -y vim tig python-dev python-pip tmux mongodb
 
-# Get and install files
-git clone https://github.com/deanboole/Provision.git
+# Get and install config files
+# git clone https://github.com/deanboole/Provision.git
+
 mv ../.tmux.conf ${HOME}
 mv ../.gitconfig /etc/gitconfig
 mv ../.vimrc /etc/vim/vimrc
