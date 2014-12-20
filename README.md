@@ -20,6 +20,7 @@ To provision working environment with these setups
         
 4. Start provisioning
 
-        $ sh Provision/scripts/provision.sh
+        $ cd Provision/scripts
+        $ sh provision.sh
 
 
