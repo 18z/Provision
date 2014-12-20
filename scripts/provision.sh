@@ -17,6 +17,9 @@ mv ../.gitconfig /etc/gitconfig
 mv ../.vimrc /etc/vim/vimrc
 mv ../.bashrc /etc/bash.bashrc
 
+# Apply bash.bashrc
+source /etc/bash.bashrc
+
 # Install vim plugin
 vim +PluginInstall +qall
 
