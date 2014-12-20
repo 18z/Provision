@@ -12,7 +12,7 @@ To provision working environment with these setups
         
 2. Install vundle
 
-        $ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+        $ git clone https://github.com/gmarik/vundle.git /etc/vim/bundle/vundle
         
 3. Clone settings from github
 
