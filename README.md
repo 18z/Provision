@@ -16,7 +16,7 @@ To provision working environment with these setups
         
 3. Clone settings from github
 
-        $ git clone https://github.com/deanboole/provision
+        $ git clone https://github.com/deanboole/Provision
         
 4. Start provisioning
 
