@@ -24,3 +24,5 @@ To provision working environment with these setups
         $ sh provision.sh
 
 
+
+[download tmux](https://packages.debian.org/wheezy-backports/tmux)
