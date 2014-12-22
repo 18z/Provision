@@ -25,3 +25,16 @@ set encoding=utf-8
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
+set laststatus=2        "Displaying status line always
+
+" start of status line settings
+set statusline=%f
+set statusline+=\ %y
+set statusline+=%=
+set statusline+=%l
+set statusline+=,
+set statusline+=%c
+set statusline+=:
+set statusline+=%L
+set statusline+=\[%p%%\]
+" end of status line settings
