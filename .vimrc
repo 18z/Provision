@@ -21,6 +21,7 @@ map <f9> :Tlist<CR>
 nmap <F8> :TagbarToggle<CR>
 nnoremap    <F2> :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
 
+set encoding=utf-8
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
