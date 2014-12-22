@@ -23,6 +23,14 @@ To provision working environment with these setups
         $ cd Provision/scripts
         $ sh provision.sh
 
+5. Git Configurations
+
+    ```
+    git config --global user.name "Your Name Here"
+    git config --global user.email "your_email@example.com"
+    git config --global core.editor "Your favorite text editor"
+    git config --global core.excludesfile '~/.gitignore'
+    ```
 
 
 [download tmux](https://packages.debian.org/wheezy-backports/tmux)
