@@ -24,7 +24,7 @@ nnoremap    <F2> :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
 set encoding=utf-8
 set tabstop=4
 set shiftwidth=4
-set softtabstop=4
+set expandtab
 set laststatus=2        "Displaying status line always
 
 " start of status line settings
