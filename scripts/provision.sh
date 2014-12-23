@@ -16,6 +16,7 @@ mv ../.tmux.conf ${HOME}
 mv ../.gitconfig /etc/gitconfig
 mv ../.vimrc /etc/vim/vimrc
 mv ../.bashrc /etc/bash.bashrc
+mv ../.gitignore ~/.gitignore
 
 # Apply bash.bashrc
 # source /etc/bash.bashrc
