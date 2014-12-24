@@ -1,0 +1,29 @@
+call pathogen#infect()
+call pathogen#helptags()
+
+syntax on
+set number
+set encoding=utf-8
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set laststatus=2        "Displaying status line always
+
+" start of status line settings
+set statusline=%f
+set statusline+=\ %y
+set statusline+=%=
+set statusline+=%l
+set statusline+=,
+set statusline+=%c
+set statusline+=:
+set statusline+=%L
+set statusline+=\[%p%%\]
+" end of status line settings
+
+map         <F9> :Tlist<CR>
+nmap        <F8> :TagbarToggle<CR>
+nnoremap    <F2> :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
+map <leader>v :e ~/.vimrc
+map <leader>t :e ~/.tmux.conf
+map <leader>b :e ~/.bashrc
