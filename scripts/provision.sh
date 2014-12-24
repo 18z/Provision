@@ -27,8 +27,13 @@ ln -sf ${HOME}/Provision/.gitignore ${HOME}/.gitignore
 # Apply bash.bashrc
 # source /etc/bash.bashrc
 
-# Install vim plugin
-vim +PluginInstall +qall
+# Install vim plugin (for vundle)
+# vim +PluginInstall +qall
+
+# Install vim plugin (for pathogen)
+cd ~/.vim
+git submodule init
+git submodule update
 
 # pip install virtualenv pymongo flask
 
