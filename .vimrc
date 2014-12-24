@@ -40,4 +40,4 @@ set statusline+=\[%p%%\]
 map <f9> :Tlist<CR>
 nmap <F8> :TagbarToggle<CR>
 nnoremap    <F2> :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
-map <leader>v :e /etc/vim/vimrc
+map <leader>v :e ~/.vimrc
