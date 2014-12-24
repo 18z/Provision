@@ -12,11 +12,11 @@ apt-get install -y vim tig python-dev python-pip tmux mongodb ctags
 # Get and install config files
 # git clone https://github.com/deanboole/Provision.git
 
-mv ../.tmux.conf ${HOME}
-mv ../.gitconfig /etc/gitconfig
-mv ../.vimrc /etc/vim/vimrc
-mv ../.bashrc /etc/bash.bashrc
-mv ../.gitignore ~/.gitignore
+ln -sf ${HOME}/Provision/.tmux.conf ${HOME}/.tmux.conf
+ln -sf ${HOME}/Provision/.gitconfig /etc/gitconfig
+ln -sf ${HOME}/Provision/.vimrc /etc/vim/vimrc
+ln -sf ${HOME}/Provision/.bashrc /etc/bash.bashrc
+ln -sf ${HOME}/Provision/.gitignore ${HOME}/.gitignore
 
 # Apply bash.bashrc
 # source /etc/bash.bashrc
