@@ -37,7 +37,9 @@ set statusline+=%L
 set statusline+=\[%p%%\]
 " end of status line settings
 
-map <f9> :Tlist<CR>
+map <F9> :Tlist<CR>
 nmap <F8> :TagbarToggle<CR>
 nnoremap    <F2> :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
 map <leader>v :e ~/.vimrc
+map <leader>t :e ~/.tmux.conf
+map <leader>b :e ~/.bashrc
