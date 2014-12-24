@@ -10,9 +10,12 @@ To provision working environment with these setups
         $ apt-get update
         $ apt-get install git curl
         
-2. Install vundle
+2. Clone vim env settings from github
 
-        $ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+        $ git clone git clone https://github.com/deanboole/dean.vim.git ~/.vim
+        
+        # If you prefer to use vundle then,
+        # $ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
         
 3. Clone settings from github
 
