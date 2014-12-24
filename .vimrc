@@ -14,12 +14,16 @@ Plugin 'gmarik/vundle'
 " :TagbarToggle
 Plugin 'majutsushi/tagbar'
 
+" markdown
+Plugin 'tpope/vim-markdown'
+
 syn on
 set nu
 
 map <f9> :Tlist<CR>
 nmap <F8> :TagbarToggle<CR>
 nnoremap    <F2> :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
+map <leader>v :e /etc/vim/vimrc
 
 set encoding=utf-8
 set tabstop=4
