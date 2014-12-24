@@ -17,14 +17,8 @@ Plugin 'majutsushi/tagbar'
 " markdown
 Plugin 'tpope/vim-markdown'
 
-syn on
-set nu
-
-map <f9> :Tlist<CR>
-nmap <F8> :TagbarToggle<CR>
-nnoremap    <F2> :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
-map <leader>v :e /etc/vim/vimrc
-
+syntax on
+set number
 set encoding=utf-8
 set tabstop=4
 set shiftwidth=4
@@ -42,3 +36,8 @@ set statusline+=:
 set statusline+=%L
 set statusline+=\[%p%%\]
 " end of status line settings
+
+map <f9> :Tlist<CR>
+nmap <F8> :TagbarToggle<CR>
+nnoremap    <F2> :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
+map <leader>v :e /etc/vim/vimrc
