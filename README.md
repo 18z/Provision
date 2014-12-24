@@ -17,7 +17,7 @@ To provision working environment with these setups
         # If you prefer to use vundle then,
         # $ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
         
-3. Clone settings from github
+3. Clone other settings from github
 
         $ cd ${HOME}
         $ git clone https://github.com/deanboole/Provision
