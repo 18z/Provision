@@ -14,7 +14,7 @@ apt-get install -y vim tig python-dev python-pip tmux mongodb ctags
 
 ln -sf ${HOME}/Provision/.tmux.conf ${HOME}/.tmux.conf
 ln -sf ${HOME}/Provision/.gitconfig ${HOME}/.gitconfig
-ln -sf ${HOME}/Provision/.vimrc ${HOME}/.vimrc
+ln -sf ${HOME}/Provision/.vimrc_pathogen ${HOME}/.vimrc
 ln -sf ${HOME}/Provision/.bashrc ${HOME}/.bashrc
 ln -sf ${HOME}/Provision/.gitignore ${HOME}/.gitignore
 
