@@ -19,9 +19,9 @@ apt-get install -y vim tig python-dev python-pip tmux mongodb ctags
 #ln -sf ${HOME}/Provision/.gitignore ${HOME}/.gitignore
 
 cp ${HOME}/Provision/.tmux.conf ${HOME}/.tmux.conf
-cp ${HOME}/Provision/.gitconfig /etc/gitconfig
-cp ${HOME}/Provision/.vimrc /etc/vim/vimrc
-cp ${HOME}/Provision/.bashrc /etc/bash.bashrc
+cp ${HOME}/Provision/.gitconfig ${HOME}/.gitconfig
+cp ${HOME}/Provision/.vimrc ${HOME}/.vimrc
+cp ${HOME}/Provision/.bashrc ${HOME}/.bashrc
 cp ${HOME}/Provision/.gitignore ${HOME}/.gitignore
 
 # Apply bash.bashrc
