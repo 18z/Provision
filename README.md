@@ -12,7 +12,7 @@ To provision working environment with these setups
         
 2. Clone vim env settings from github
 
-        $ git clone git clone https://github.com/deanboole/dean.vim.git ~/.vim
+        $ git clone https://github.com/deanboole/dean.vim.git ~/.vim
         
         # If you prefer to use vundle then,
         # $ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
