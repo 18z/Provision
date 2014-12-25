@@ -7,7 +7,7 @@ set -x
 
 # Package installation
 apt-get update
-apt-get install -y vim tig python-dev python-pip tmux mongodb ctags keepassx sudo
+apt-get install -y vim tig python-dev python-pip tmux mongodb ctags keepassx sudo openssh-server
 
 # Get and install config files
 # git clone https://github.com/deanboole/Provision.git
