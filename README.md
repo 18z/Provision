@@ -7,8 +7,8 @@ To provision working environment with these setups
 
 1. Install Git
 
-        $ apt-get update
-        $ apt-get install git curl
+        $ sudo apt-get update
+        $ sudo apt-get install git curl
         
 2. Clone vim env settings from github
 
