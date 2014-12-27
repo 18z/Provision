@@ -6,7 +6,7 @@ set number
 set encoding=utf-8
 set tabstop=4
 set shiftwidth=4
-set expandtab
+"set expandtab
 set laststatus=2        "Displaying status line always
 
 " start of status line settings
