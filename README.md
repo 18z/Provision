@@ -1,9 +1,9 @@
 Provisioning Debian
 =========
 
-These are setups that I feel comfortable to work with.
+These are settings that I feel comfortable to work with.
 
-To provision working environment with these setups
+To provision working environment with these settings:
 
 1. Install Git
 
