@@ -38,6 +38,3 @@ To provision working environment with these settings:
     git config --global core.editor "Your favorite text editor"
     git config --global core.excludesfile '~/.gitignore'
     ```
-
-
-[download tmux](https://packages.debian.org/wheezy-backports/tmux)
