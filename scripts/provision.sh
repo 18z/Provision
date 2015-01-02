@@ -6,9 +6,9 @@ set -e
 set -x
 
 # Package installation
-sudo apt-get update
-sudo apt-get install -y vim tig python-dev python-pip tmux mongodb ctags keepassx sudo openssh-server \
-                        ipython ipython-notebook python-pandas python-setuptools
+#sudo apt-get update
+#sudo apt-get install -y vim tig python-dev python-pip tmux mongodb ctags keepassx sudo openssh-server \
+#                        ipython ipython-notebook python-pandas python-setuptools
 
 # Get and install config files
 # git clone https://github.com/deanboole/Provision.git

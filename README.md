@@ -1,14 +1,17 @@
-Provisioning Debian
+Provisioning Mac OS X
 =========
 
 These are settings that I feel comfortable to work with.
 
 To provision working environment with these settings:
 
-1. Install Git
+1. Install homebrew
 
-        $ sudo apt-get update
-        $ sudo apt-get install git curl
+	$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+1. Install Git, curl and tig
+
+        $ brew install git curl tig
         
 2. Clone vim env settings from github
 
