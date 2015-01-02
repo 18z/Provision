@@ -7,7 +7,7 @@ To provision working environment with these settings:
 
 1. Install homebrew
 
-	$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+		$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 1. Install Git, curl and tig
 
