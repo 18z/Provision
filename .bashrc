@@ -5,6 +5,9 @@ PS1="[\u@\h \W]\\$ "
 export CLICOLOR=1
 export LSCOLORS=dxfxcxdxbxegedabagacad
 
+# set vim as default editor
+export EDITOR="vim"
+
 function extract()      # Handy Extract Program
 {
     if [ -f $1 ] ; then
