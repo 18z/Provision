@@ -1,6 +1,8 @@
 PS1="[\u@\h \W]\\$ "
 #PS1='[\[\u@\h] \e[32m\W\e[0m$ \]'
 
+export EDITOR="vim"
+
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
