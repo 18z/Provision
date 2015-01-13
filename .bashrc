@@ -15,6 +15,11 @@ if [ -x /usr/bin/dircolors ]; then
     #alias egrep='egrep --color=auto'
 fi
 
+function backup()
+{
+    cp $1 $1.bak
+}
+
 function extract()      # Handy Extract Program
 {
     if [ -f $1 ] ; then
