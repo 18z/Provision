@@ -8,6 +8,11 @@ export LSCOLORS=dxfxcxdxbxegedabagacad
 # set vim as default editor
 export EDITOR="vim"
 
+function backup()
+{
+    cp $1 $1.bak
+}
+
 function extract()      # Handy Extract Program
 {
     if [ -f $1 ] ; then
