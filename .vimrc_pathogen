@@ -2,6 +2,11 @@ call pathogen#infect()
 call pathogen#helptags()
 
 syntax on
+
+" ruler
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
+
 set number
 set encoding=utf-8
 set tabstop=4
