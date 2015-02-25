@@ -7,6 +7,9 @@ syntax on
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
 
+" search highlight
+set hlsearch
+
 set number
 set encoding=utf-8
 set tabstop=4
