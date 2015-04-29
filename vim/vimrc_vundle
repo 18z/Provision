@@ -1,5 +1,4 @@
 set nocompatible              " be iMproved, required
-filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -27,7 +26,7 @@ match OverLength /\%81v.\+/
 set hlsearch
 
 set number
-"set encoding=utf-8
+set encoding=utf-8
 set tabstop=4
 set shiftwidth=4
 "set expandtab
@@ -52,16 +51,16 @@ set t_Co=256
 " end of color settings
 
 
-nnoremap    <F2> :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
-nnoremap    <F3> :set invpaste paste?<CR>
-nmap        <F4> :set invnumber<CR>
-nmap        <F5> :set hls!<CR>:set hls?<CR>
-nnoremap    <F6> :set ignorecase!<CR>
-nmap        <F8> :TagbarToggle<CR>
-map         <F9> :Tlist<CR>
-map <leader>v :e ~/.vimrc
-map <leader>t :e ~/.tmux.conf
-map <leader>b :e ~/.bashrc 
+nnoremap	<F2> :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
+nnoremap	<F3> :set invpaste paste?<CR>
+nmap		<F4> :set invnumber<CR>
+nmap		<F5> :set hls!<CR>:set hls?<CR>
+nnoremap	<F6> :set ignorecase!<CR>
+nmap		<F8> :TagbarToggle<CR>
+map			<F9> :Tlist<CR>
+map			<leader>v :e ~/.vimrc
+map			<leader>t :e ~/.tmux.conf
+map			<leader>b :e ~/.bashrc 
 
 " autocmd for python
 augroup filetype_python
