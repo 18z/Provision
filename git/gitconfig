@@ -16,3 +16,5 @@
 [color]
     status = always
     ui = true
+[init]
+    templatedir = ~/.git/templates
