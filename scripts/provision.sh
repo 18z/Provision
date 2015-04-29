@@ -22,7 +22,7 @@ ln -sf ${HOME}/Provision/vim/vimrc_vundle ${HOME}/.vimrc
 ln -sf ${HOME}/Provision/bashrc ${HOME}/.bashrc
 
 mkdir -p ${HOME}/.vim/colors
-ln -sf ${HOME}/Provision/vim/colors/kalisi.vim ${HOME}/.vim/
+ln -sf ${HOME}/Provision/vim/colors/kalisi.vim ${HOME}/.vim/colors
 
 # Apply bash.bashrc
 # source /etc/bash.bashrc
