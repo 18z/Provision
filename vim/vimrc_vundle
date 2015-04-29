@@ -50,6 +50,7 @@ nnoremap	<leader>l" ^i"<esc>$a"<esc>^
 nnoremap	<leader>l' ^i'<esc>$a'<esc>^
 nnoremap	<leader><Left> :tabprevious<CR>
 nnoremap	<leader><Right> :tabnext<CR>
+nnoremap	<leader>t :tabnew<CR>
 
 " autocmd for python
 augroup filetype_python
