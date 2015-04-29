@@ -18,7 +18,7 @@ To provision working environment with these settings:
 3. Start provisioning
 
         $ cd Provision/scripts
-        $ sh provision.sh
+        $ bash provision.sh
 
 4. Git Configurations
 
