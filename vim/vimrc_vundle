@@ -52,6 +52,11 @@ map			<F9> :Tlist<CR>
 map			<leader>v :e ~/.vimrc
 map			<leader>t :e ~/.tmux.conf
 map			<leader>b :e ~/.bashrc 
+nnoremap	<leader>sv :vsplit $MYVIMRC<cr>
+nnoremap	<leader>" viw<esc>a"<esc>hbi"<esc>lbl
+nnoremap	<leader>' viw<esc>a'<esc>hbi'<esc>lbl
+nnoremap	<leader>l" ^i"<esc>$a"<esc>^
+nnoremap	<leader>l' ^i'<esc>$a'<esc>^
 
 " autocmd for python
 augroup filetype_python
