@@ -21,9 +21,9 @@ ln -sf ${HOME}/Provision/.gitignore ${HOME}/.gitignore
 # source /etc/bash.bashrc
 
 # Install vim plugin (for vundle)
-# vim +PluginInstall +qall
+vim +PluginInstall +qall
 
 # Install vim plugin (for pathogen)
-cd ~/.vim
-git submodule init
-git submodule update
+# cd ~/.vim
+# git submodule init
+# git submodule update
