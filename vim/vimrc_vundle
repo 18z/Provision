@@ -47,7 +47,7 @@ set statusline+=\[%p%%\]
 
 " start of color settings
 set background=dark
-colorscheme kalisi
+colorscheme solarized
 " end of color settings
 
 
