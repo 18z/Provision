@@ -48,6 +48,7 @@ set statusline+=\[%p%%\]
 " start of color settings
 set background=dark
 colorscheme vividchalk
+set t_Co=256
 " end of color settings
 
 
