@@ -21,6 +21,9 @@ ln -sf ${HOME}/Provision/git/gitignore ${HOME}/.gitignore
 ln -sf ${HOME}/Provision/vim/vimrc_vundle ${HOME}/.vimrc
 ln -sf ${HOME}/Provision/bashrc ${HOME}/.bashrc
 
+mkdir -p ${HOME}/.vim/colors
+ln -sf ${HOME}/Provision/vim/colors/kalisi.vim ${HOME}/.vim/
+
 # Apply bash.bashrc
 # source /etc/bash.bashrc
 
