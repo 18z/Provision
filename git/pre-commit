@@ -1,0 +1,13 @@
+#!/bin/bash
+
+remote=$(git remote -v |grep push |grep -o "github")
+email=$(git config user.email)
+
+if [ $remote == "github" ] && [ $email == "@" ]; then
+    echo "change your email!"
+    exit 1
+else
+    echo "okay to commit"
+    exit 0
+fi
+
