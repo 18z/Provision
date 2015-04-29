@@ -56,6 +56,7 @@ map         <F9> :Tlist<CR>
 nmap        <F8> :TagbarToggle<CR>
 nnoremap    <F2> :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
 nnoremap    <F3> :set invpaste paste?<CR>
+nmap        <F4> :set invnumber<CR>
 map <leader>v :e ~/.vimrc
 map <leader>t :e ~/.tmux.conf
 map <leader>b :e ~/.bashrc 
