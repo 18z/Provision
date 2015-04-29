@@ -52,13 +52,13 @@ set t_Co=256
 " end of color settings
 
 
-map         <F9> :Tlist<CR>
-nmap        <F8> :TagbarToggle<CR>
 nnoremap    <F2> :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
 nnoremap    <F3> :set invpaste paste?<CR>
 nmap        <F4> :set invnumber<CR>
 nmap        <F5> :set hls!<CR>:set hls?<CR>
 nnoremap    <F6> :set ignorecase!<CR>
+nmap        <F8> :TagbarToggle<CR>
+map         <F9> :Tlist<CR>
 map <leader>v :e ~/.vimrc
 map <leader>t :e ~/.tmux.conf
 map <leader>b :e ~/.bashrc 
