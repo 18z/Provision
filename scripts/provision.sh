@@ -11,14 +11,20 @@ sudo apt-get install -y vim tig python-dev python-pip tmux ctags sudo openssh-se
                         python-setuptools
 
 # Install config files
-ln -sf ${HOME}/Provision/.tmux.conf ${HOME}/.tmux.conf
-ln -sf ${HOME}/Provision/.gitconfig ${HOME}/.gitconfig
-ln -sf ${HOME}/Provision/.vimrc_pathogen ${HOME}/.vimrc
-ln -sf ${HOME}/Provision/.bashrc ${HOME}/.bashrc
-ln -sf ${HOME}/Provision/.gitignore ${HOME}/.gitignore
+ln -sf ${HOME}/Provision/tmux.conf ${HOME}/.tmux.conf
+ln -sf ${HOME}/Provision/git/gitconfig ${HOME}/.gitconfig
+ln -sf ${HOME}/Provision/git/gitignore ${HOME}/.gitignore
+ln -sf ${HOME}/Provision/vim/vimrc_vundle ${HOME}/.vimrc
+ln -sf ${HOME}/Provision/bashrc ${HOME}/.bashrc
 
 # Apply bash.bashrc
 # source /etc/bash.bashrc
+
+# Vundle installation
+if [ ! -d "${HOME}/.vim/bundle/Vundle.vim" ]; then
+    mkdir ${HOME}/.vim/bundle/
+    git clone https://github.com/gmarik/Vundle.vim.git ${HOME}/.vim/bundle/Vundle.vim
+fi
 
 # Install vim plugin (for vundle)
 vim +PluginInstall +qall
