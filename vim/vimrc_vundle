@@ -3,20 +3,11 @@ set nocompatible              " be iMproved, required
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"let path = '~/some/path/here'
-"call vundle#rc(path)
 
-" let Vundle manage Vundle, required
-Plugin 'gmarik/vundle'
-
-" :TagbarToggle
-Plugin 'majutsushi/tagbar'
-
-" markdown
-Plugin 'tpope/vim-markdown'
-
-syntax on
+Plugin 'gmarik/vundle'			" let Vundle manage Vundle, required
+Plugin 'majutsushi/tagbar'		" :TagbarToggle
+Plugin 'tpope/vim-markdown'		" markdown
+" end of vundles
 
 " ruler
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
@@ -45,11 +36,11 @@ set statusline+=\[%p%%\]
 " end of status line settings
 
 " start of color settings
+syntax on
 set background=dark
 colorscheme vividchalk
 set t_Co=256
 " end of color settings
-
 
 nnoremap	<F2> :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
 nnoremap	<F3> :set invpaste paste?<CR>
