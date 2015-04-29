@@ -45,6 +45,12 @@ set statusline+=%L
 set statusline+=\[%p%%\]
 " end of status line settings
 
+" start of color settings
+set background=dark
+colorscheme kalisi
+" end of color settings
+
+
 map         <F9> :Tlist<CR>
 nmap        <F8> :TagbarToggle<CR>
 nnoremap    <F2> :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
