@@ -44,7 +44,7 @@
 				" Show/Not show line numbers
 	nnoremap	<leader>5 :set hls!<CR>:set hls?<CR>
 				" Highlight/Not Highlight search results
-	nnoremap	<leader>6 :set ignorecase!<CR>
+	nnoremap	<leader>6 :set ignorecase!<CR>:set ignorecase?<CR>
 				" Search keyword with case ignorance
 	nnoremap	<leader>7 :TagbarToggle<CR>
 				" Open tagbar
