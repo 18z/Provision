@@ -78,6 +78,10 @@
 				" Type \n to open CtrlP
 	nnoremap	<leader>pd :CtrlPDir ~<CR>
 				" Type \n to open CtrlPDir [Ctrl + f/b to cycle between modes]
+	nnoremap	<leader>u viwu<esc>
+				" Type \u to convert to lower case
+	nnoremap	<leader>U viwU<esc>
+				" Type \U to convert to UPPER case
 
 " autocmd for python
 	augroup filetype_python
