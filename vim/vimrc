@@ -70,7 +70,7 @@
 				" Type \<Right> to switch next tab
 	nnoremap	<leader>t :tabnew<CR>
 				" Type \t to open a new tab and edit a new file
-	map 		<C-p> :NERDTreeToggle<CR>
+	map 		<C-n> :NERDTreeToggle<CR>
 
 " autocmd for python
 	augroup filetype_python
