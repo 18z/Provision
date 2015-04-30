@@ -19,6 +19,7 @@
 	Plugin 'majutsushi/tagbar'		" :TagbarToggle
 	Plugin 'tpope/vim-markdown'		" markdown
 	Plugin 'scrooloose/nerdtree'	" file manager
+	Plugin 'kien/ctrlp.vim'			" powerful file searcher
 	Plugin 'bling/vim-airline'		" status line
 	let g:airline#extensions#tabline#enabled = 1
 									" enable tabline
