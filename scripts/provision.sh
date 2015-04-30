@@ -18,7 +18,7 @@ ln -sf ${HOME}/Provision/git/gitconfig ${HOME}/.gitconfig
 ln -sf ${HOME}/Provision/git/pre-commit ${HOME}/.git/templates/hooks/pre-commit
 ln -sf ${HOME}/Provision/git/gitignore ${HOME}/.gitignore
 
-ln -sf ${HOME}/Provision/vim/vimrc_vundle ${HOME}/.vimrc
+ln -sf ${HOME}/Provision/vim/vimrc ${HOME}/.vimrc
 ln -sf ${HOME}/Provision/bashrc ${HOME}/.bashrc
 
 mkdir -p ${HOME}/.vim/colors
