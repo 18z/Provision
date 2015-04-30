@@ -45,7 +45,6 @@
 				" Search keyword with case ignorance
 	nmap		<F8> :TagbarToggle<CR>
 				" Open tagbar
-	map			<F9> :Tlist<CR>
 	map			<leader>v :e ~/.vimrc
 				" Type \v then press enter to edit ~/.vimrc
 	map			<leader>t :e ~/.tmux.conf
@@ -91,3 +90,11 @@
 			set tag=tags
 		endif
 	endfunction
+
+" Auto load plugins
+	call vundle#end()            " required
+	filetype plugin indent on    " required
+
+" remove tailing spaces when save file
+	autocmd BufWritePre * :%s/\s\+$//e
+autocmd BufWritePre * :%s/\s\+$//e
