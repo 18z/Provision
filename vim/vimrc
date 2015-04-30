@@ -18,6 +18,7 @@
 	Plugin 'gmarik/vundle'			" let Vundle manage Vundle, required
 	Plugin 'majutsushi/tagbar'		" :TagbarToggle
 	Plugin 'tpope/vim-markdown'		" markdown
+	Plugin 'scrooloose/nerdtree'	" file manager
 	Plugin 'bling/vim-airline'		" status line
 	let g:airline#extensions#tabline#enabled = 1
 									" enable tabline
@@ -69,6 +70,7 @@
 				" Type \<Right> to switch next tab
 	nnoremap	<leader>t :tabnew<CR>
 				" Type \t to open a new tab and edit a new file
+	map 		<C-p> :NERDTreeToggle<CR>
 
 " autocmd for python
 	augroup filetype_python
