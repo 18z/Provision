@@ -1,73 +1,75 @@
-set nocompatible              " be iMproved, required
+" General settings
+	set nocompatible				" Vim does not imitate vi
+	filetype off 					" Do not auto detect file type
+	set number						" Show line numbers
+	set hlsearch					" High light search results
+	set encoding=utf-8
+	set tabstop=4
+	set shiftwidth=4
+	"set expandtab					" Converting tabs to spaces
+	set laststatus=2				" Displaying status line always
+	set foldmethod=indent			" method: manual, indent, syntax, expr
+	set foldnestmax=5				
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+	set rtp+=~/.vim/bundle/Vundle.vim
+	call vundle#begin()
 
-Plugin 'gmarik/vundle'			" let Vundle manage Vundle, required
-Plugin 'majutsushi/tagbar'		" :TagbarToggle
-Plugin 'tpope/vim-markdown'		" markdown
-Plugin 'bling/vim-airline'
-let g:airline#extensions#tabline#enabled = 1
-" end of vundles
+	Plugin 'gmarik/vundle'			" let Vundle manage Vundle, required
+	Plugin 'majutsushi/tagbar'		" :TagbarToggle
+	Plugin 'tpope/vim-markdown'		" markdown
+	Plugin 'bling/vim-airline'		" status line
+	let g:airline#extensions#tabline#enabled = 1
+									" enable tabline
 
-" ruler
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
+" ruler - show red blocks when length is over 80
+	highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+	match OverLength /\%81v.\+/
 
-" search highlight
-set hlsearch
+" Color settings
+	syntax on						" Show colors
+	set background=dark
+	colorscheme vividchalk
+	set t_Co=256
 
-set number
-set encoding=utf-8
-set tabstop=4
-set shiftwidth=4
-"set expandtab
-set laststatus=2        "Displaying status line always
-
-" start of color settings
-syntax on
-set background=dark
-colorscheme vividchalk
-set t_Co=256
-" end of color settings
-
-nnoremap	<F2> :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
-nnoremap	<F3> :set invpaste paste?<CR>
-nmap		<F4> :set invnumber<CR>
-nmap		<F5> :set hls!<CR>:set hls?<CR>
-nnoremap	<F6> :set ignorecase!<CR>
-nmap		<F8> :TagbarToggle<CR>
-map			<F9> :Tlist<CR>
-map			<leader>v :e ~/.vimrc
-map			<leader>t :e ~/.tmux.conf
-map			<leader>b :e ~/.bashrc 
-nnoremap	<leader>ev :vsplit $MYVIMRC<cr>
-nnoremap	<leader>sv :source $MYVIMRC<cr>
-nnoremap	<leader>" viw<esc>a"<esc>hbi"<esc>lbl
-nnoremap	<leader>' viw<esc>a'<esc>hbi'<esc>lbl
-nnoremap	<leader>l" ^i"<esc>$a"<esc>^
-nnoremap	<leader>l' ^i'<esc>$a'<esc>^
-nnoremap	<leader><Left> :tabprevious<CR>
-nnoremap	<leader><Right> :tabnext<CR>
-nnoremap	<leader>t :tabnew<CR>
+" Keymap settings
+	nnoremap	<F2> :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
+	nnoremap	<F3> :set invpaste paste?<CR>
+	nmap		<F4> :set invnumber<CR>
+	nmap		<F5> :set hls!<CR>:set hls?<CR>
+	nnoremap	<F6> :set ignorecase!<CR>
+	nmap		<F8> :TagbarToggle<CR>
+	map			<F9> :Tlist<CR>
+	map			<leader>v :e ~/.vimrc
+	map			<leader>t :e ~/.tmux.conf
+	map			<leader>b :e ~/.bashrc 
+	nnoremap	<leader>ev :vsplit $MYVIMRC<cr>
+	nnoremap	<leader>sv :source $MYVIMRC<cr>
+	nnoremap	<leader>" viw<esc>a"<esc>hbi"<esc>lbl
+	nnoremap	<leader>' viw<esc>a'<esc>hbi'<esc>lbl
+	nnoremap	<leader>l" ^i"<esc>$a"<esc>^
+	nnoremap	<leader>l' ^i'<esc>$a'<esc>^
+	nnoremap	<leader><Left> :tabprevious<CR>
+	nnoremap	<leader><Right> :tabnext<CR>
+	nnoremap	<leader>t :tabnew<CR>
 
 " autocmd for python
-augroup filetype_python
-    autocmd!
-    autocmd BufRead,BufNewFile *.py set filetype=python
-    autocmd FileType python TagbarOpen
-    autocmd FileType python set tabstop=4
-    autocmd FileType python set shiftwidth=4
-    autocmd FileType python set expandtab
-    autocmd FileType python set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
-    autocmd FileType python :call CheckAndLoadTags()
-    autocmd FileType python TagbarOpen
-    autocmd FileType python iabbrev pythonHead #!/usr/bin/env python<cr># -*- coding: utf-8 -*-<cr>
-augroup END
+	augroup filetype_python
+		autocmd!
+		autocmd BufRead,BufNewFile *.py set filetype=python
+		autocmd FileType python TagbarOpen
+		autocmd FileType python set tabstop=4
+		autocmd FileType python set shiftwidth=4
+		autocmd FileType python set expandtab
+		autocmd FileType python set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
+		autocmd FileType python :call CheckAndLoadTags()
+		autocmd FileType python TagbarOpen
+		autocmd FileType python iabbrev pythonHead #!/usr/bin/env python<cr># -*- coding: utf-8 -*-<cr>
+	augroup END
 
-function! CheckAndLoadTags()
-    if file_readable("./tags")
-        set tag=tags
-    endif
-endfunction
+" Autocmd for ctags
+	function! CheckAndLoadTags()
+		if file_readable("./tags")
+			set tag=tags
+		endif
+	endfunction
