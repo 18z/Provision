@@ -1,6 +1,6 @@
 " General settings
 	set nocompatible				" Vim does not imitate vi
-	filetype off 					" Do not auto detect file type
+	filetype plugin indent	on		" Detect file type, load plugins, etc
 	set number						" Show line numbers
 	set hlsearch					" High light search results
 	set encoding=utf-8
