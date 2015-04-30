@@ -37,17 +37,17 @@
 " Keymap settings
 	" nnoremap n:normal mode, nore:no recursive, map:map
 	nnoremap	<leader>2 :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
-				" Show tabs and spaces
+				" Type \2 to show tabs and spaces
 	nnoremap	<leader>3 :set invpaste paste?<CR>
-				" Enable/Disable paste mode
+				" Type \3 to enable/disable paste mode
 	nnoremap	<leader>4 :set invnumber<CR>
-				" Show/Not show line numbers
+				" Type \4 to show/not show line numbers
 	nnoremap	<leader>5 :set hls!<CR>:set hls?<CR>
-				" Highlight/Not Highlight search results
+				" Type \5 to highlight/not highlight search results
 	nnoremap	<leader>6 :set ignorecase!<CR>:set ignorecase?<CR>
-				" Search keyword with case ignorance
+				" Type \6 to search keyword with case ignorance
 	nnoremap	<leader>7 :TagbarToggle<CR>
-				" Open tagbar
+				" Type \7 to open tagbar
 	nnoremap	<leader>v :e ~/.vimrc
 				" Type \v then press enter to edit ~/.vimrc
 	nnoremap	<leader>t :e ~/.tmux.conf
@@ -55,9 +55,9 @@
 	nnoremap	<leader>b :e ~/.bashrc
 				" Type \b then press enter to edit ~/.bashrc
 	nnoremap	<leader>ev :vsplit $MYVIMRC<cr>
-				" Type \ev then press enter to edit ~/.vimrc in spit panel
+				" Type \ev to edit ~/.vimrc in spit panel
 	nnoremap	<leader>sv :source $MYVIMRC<cr>
-				" Type \sv then press enter to source ~/.vimrc
+				" Type \sv to source ~/.vimrc
 	nnoremap	<leader>" viw<esc>a"<esc>hbi"<esc>lbl
 				" Type \" to double quote one word
 	nnoremap	<leader>' viw<esc>a'<esc>hbi'<esc>lbl
