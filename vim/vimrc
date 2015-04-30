@@ -82,6 +82,8 @@
 				" Type \u to convert to lower case
 	nnoremap	<leader>U viwU<esc>
 				" Type \U to convert to UPPER case
+	nnoremap	<space> za
+				" Type space to fold/unfold
 
 " autocmd for python
 	augroup filetype_python
