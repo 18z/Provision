@@ -71,7 +71,12 @@
 				" Type \<Right> to switch next tab
 	nnoremap	<leader>t :tabnew<CR>
 				" Type \t to open a new tab and edit a new file
-	map 		<C-n> :NERDTreeToggle<CR>
+	map 		<leader>n :NERDTreeToggle<CR>
+				" Type \n to open NERDTree
+	map			<leader>p :CtrlP<CR>
+				" Type \n to open CtrlP
+	map			<leader>pd :CtrlPDir ~<CR>
+				" Type \n to open CtrlPDir [Ctrl + f/b to cycle between modes]
 
 " autocmd for python
 	augroup filetype_python
