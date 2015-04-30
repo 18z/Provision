@@ -35,23 +35,24 @@
 	set t_Co=256
 
 " Keymap settings
+	" nnoremap n:normal mode, nore:no recursive, map:map
 	nnoremap	<F2> :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
 				" Show tabs and spaces
 	nnoremap	<F3> :set invpaste paste?<CR>
 				" Enable/Disable paste mode
-	nmap		<F4> :set invnumber<CR>
+	nnoremap		<F4> :set invnumber<CR>
 				" Show/Not show line numbers
-	nmap		<F5> :set hls!<CR>:set hls?<CR>
+	nnoremap		<F5> :set hls!<CR>:set hls?<CR>
 				" Highlight/Not Highlight search results
 	nnoremap	<F6> :set ignorecase!<CR>
 				" Search keyword with case ignorance
-	nmap		<F8> :TagbarToggle<CR>
+	nnoremap		<F8> :TagbarToggle<CR>
 				" Open tagbar
-	map			<leader>v :e ~/.vimrc
+	nnoremap		<leader>v :e ~/.vimrc
 				" Type \v then press enter to edit ~/.vimrc
-	map			<leader>t :e ~/.tmux.conf
+	nnoremap		<leader>t :e ~/.tmux.conf
 				" Type \t then press enter to edit ~/.tmux.conf
-	map			<leader>b :e ~/.bashrc
+	nnoremap		<leader>b :e ~/.bashrc
 				" Type \b then press enter to edit ~/.bashrc
 	nnoremap	<leader>ev :vsplit $MYVIMRC<cr>
 				" Type \ev then press enter to edit ~/.vimrc in spit panel
@@ -71,11 +72,11 @@
 				" Type \<Right> to switch next tab
 	nnoremap	<leader>t :tabnew<CR>
 				" Type \t to open a new tab and edit a new file
-	map 		<leader>n :NERDTreeToggle<CR>
+	nnoremap		<leader>n :NERDTreeToggle<CR>
 				" Type \n to open NERDTree
-	map			<leader>p :CtrlP<CR>
+	nnoremap		<leader>p :CtrlP<CR>
 				" Type \n to open CtrlP
-	map			<leader>pd :CtrlPDir ~<CR>
+	nnoremap			<leader>pd :CtrlPDir ~<CR>
 				" Type \n to open CtrlPDir [Ctrl + f/b to cycle between modes]
 
 " autocmd for python
