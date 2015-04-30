@@ -9,7 +9,7 @@
 	"set expandtab					" Converting tabs to spaces
 	set laststatus=2				" Displaying status line always
 	set foldmethod=indent			" method: manual, indent, syntax, expr
-	set foldnestmax=5				
+	set foldnestmax=5
 
 " set the runtime path to include Vundle and initialize
 	set rtp+=~/.vim/bundle/Vundle.vim
@@ -49,7 +49,7 @@
 				" Type \v then press enter to edit ~/.vimrc
 	map			<leader>t :e ~/.tmux.conf
 				" Type \t then press enter to edit ~/.tmux.conf
-	map			<leader>b :e ~/.bashrc 
+	map			<leader>b :e ~/.bashrc
 				" Type \b then press enter to edit ~/.bashrc
 	nnoremap	<leader>ev :vsplit $MYVIMRC<cr>
 				" Type \ev then press enter to edit ~/.vimrc in spit panel
@@ -97,4 +97,3 @@
 
 " remove tailing spaces when save file
 	autocmd BufWritePre * :%s/\s\+$//e
-autocmd BufWritePre * :%s/\s\+$//e
