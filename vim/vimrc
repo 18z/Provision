@@ -18,6 +18,7 @@
 	Plugin 'gmarik/vundle'			" let Vundle manage Vundle, required
 	Plugin 'majutsushi/tagbar'		" :TagbarToggle
 	Plugin 'tpope/vim-markdown'		" markdown
+	Plugin 'vim-scripts/tComment'	" tComment (Type gcc to comment)
 	Plugin 'scrooloose/nerdtree'	" file manager
 	Plugin 'kien/ctrlp.vim'			" powerful file searcher
 	Plugin 'bling/vim-airline'		" status line
