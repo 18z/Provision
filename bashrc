@@ -14,6 +14,8 @@ if [ -x /usr/bin/dircolors ]; then
     #alias egrep='egrep --color=auto'
 fi
 
+alias checkwanip='curl ifconfig.me/ip'
+
 function backup()
 {
     cp $1 $1.bak
