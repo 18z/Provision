@@ -1,115 +1,115 @@
 " General settings
-	set nocompatible				" Vim does not imitate vi
-	filetype plugin indent	on		" Detect file type, load plugins, etc
-	set number						" Show line numbers
-	set hlsearch					" High light search results
-	set encoding=utf-8
-	set tabstop=4
-	set shiftwidth=4
-	"set expandtab					" Converting tabs to spaces
-	set laststatus=2				" Displaying status line always
-	set foldmethod=indent			" method: manual, indent, syntax, expr
-	set foldnestmax=5
+    set nocompatible                " Vim does not imitate vi
+    filetype plugin indent  on      " Detect file type, load plugins, etc
+    set number                      " Show line numbers
+    set hlsearch                    " High light search results
+    set encoding=utf-8
+    set tabstop=4
+    set shiftwidth=4
+    set expandtab                   " Converting tabs to spaces
+    set laststatus=2                " Displaying status line always
+    set foldmethod=indent           " method: manual, indent, syntax, expr
+    set foldnestmax=5
 
 " set the runtime path to include Vundle and initialize
-	set rtp+=~/.vim/bundle/Vundle.vim
-	call vundle#begin()
+    set rtp+=~/.vim/bundle/Vundle.vim
+    call vundle#begin()
 
-	Plugin 'gmarik/vundle'			" let Vundle manage Vundle, required
-	Plugin 'majutsushi/tagbar'		" :TagbarToggle
-	Plugin 'tpope/vim-markdown'		" markdown
-	Plugin 'vim-scripts/tComment'	" tComment (Type gcc to comment)
-	Plugin 'scrooloose/nerdtree'	" file manager
-	Plugin 'kien/ctrlp.vim'			" powerful file searcher
-	Plugin 'bling/vim-airline'		" status line
-	let g:airline#extensions#tabline#enabled = 1
-									" enable tabline
+    Plugin 'gmarik/vundle'          " let Vundle manage Vundle, required
+    Plugin 'majutsushi/tagbar'      " :TagbarToggle
+    Plugin 'tpope/vim-markdown'     " markdown
+    Plugin 'vim-scripts/tComment'   " tComment (Type gcc to comment)
+    Plugin 'scrooloose/nerdtree'    " file manager
+    Plugin 'kien/ctrlp.vim'         " powerful file searcher
+    Plugin 'bling/vim-airline'      " status line
+    let g:airline#extensions#tabline#enabled = 1
+                                    " enable tabline
 
 " Color settings
-	syntax on						" Show colors
-	set background=dark
-	colorscheme vividchalk
-	set t_Co=256
+    syntax on                       " Show colors
+    set background=dark
+    colorscheme vividchalk
+    set t_Co=256
 
 " Keymap settings
-	" nnoremap n:normal mode, nore:no recursive, map:map
-	nnoremap	<leader>2 :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
-				" Type \2 to show tabs and spaces
-	nnoremap	<leader>3 :set invpaste paste?<CR>
-				" Type \3 to enable/disable paste mode
-	nnoremap	<leader>4 :set invnumber<CR>
-				" Type \4 to show/not show line numbers
-	nnoremap	<leader>5 :set hls!<CR>:set hls?<CR>
-				" Type \5 to highlight/not highlight search results
-	nnoremap	<leader>6 :set ignorecase!<CR>:set ignorecase?<CR>
-				" Type \6 to search keyword with case ignorance
-	nnoremap	<leader>7 :TagbarToggle<CR>
-				" Type \7 to open tagbar
-	nnoremap	<leader>v :e ~/.vimrc
-				" Type \v then press enter to edit ~/.vimrc
-	nnoremap	<leader>t :e ~/.tmux.conf
-				" Type \t then press enter to edit ~/.tmux.conf
-	nnoremap	<leader>b :e ~/.bashrc
-				" Type \b then press enter to edit ~/.bashrc
-	nnoremap	<leader>ev :vsplit $MYVIMRC<cr>
-				" Type \ev to edit ~/.vimrc in spit panel
-	nnoremap	<leader>sv :source $MYVIMRC<cr>
-				" Type \sv to source ~/.vimrc
-	nnoremap	<leader>" viw<esc>a"<esc>hbi"<esc>lbl
-				" Type \" to double quote one word
-	nnoremap	<leader>' viw<esc>a'<esc>hbi'<esc>lbl
-				" Type \' to single quote one word
-	nnoremap	<leader>l" ^i"<esc>$a"<esc>^
-				" Type \l" to double quote one line
-	nnoremap	<leader>l' ^i'<esc>$a'<esc>^
-				" Type \l' to single quote one line
-	nnoremap	<leader><Left> :tabprevious<CR>
-				" Type \<Left> to switch to previous tab
-	nnoremap	<leader><Right> :tabnext<CR>
-				" Type \<Right> to switch next tab
-	nnoremap	<leader>t :tabnew<CR>
-				" Type \t to open a new tab and edit a new file
-	nnoremap	<leader>n :NERDTreeToggle<CR>
-				" Type \n to open NERDTree
-	nnoremap	<leader>p :CtrlP<CR>
-				" Type \n to open CtrlP
-	nnoremap	<leader>pd :CtrlPDir ~<CR>
-				" Type \n to open CtrlPDir [Ctrl + f/b to cycle between modes]
-	nnoremap	<leader>u viwu<esc>
-				" Type \u to convert to lower case
-	nnoremap	<leader>U viwU<esc>
-				" Type \U to convert to UPPER case
-	nnoremap	<space> za
-				" Type space to fold/unfold
+    " nnoremap n:normal mode, nore:no recursive, map:map
+    nnoremap    <leader>2 :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
+                " Type \2 to show tabs and spaces
+    nnoremap    <leader>3 :set invpaste paste?<CR>
+                " Type \3 to enable/disable paste mode
+    nnoremap    <leader>4 :set invnumber<CR>
+                " Type \4 to show/not show line numbers
+    nnoremap    <leader>5 :set hls!<CR>:set hls?<CR>
+                " Type \5 to highlight/not highlight search results
+    nnoremap    <leader>6 :set ignorecase!<CR>:set ignorecase?<CR>
+                " Type \6 to search keyword with case ignorance
+    nnoremap    <leader>7 :TagbarToggle<CR>
+                " Type \7 to open tagbar
+    nnoremap    <leader>v :e ~/.vimrc
+                " Type \v then press enter to edit ~/.vimrc
+    nnoremap    <leader>t :e ~/.tmux.conf
+                " Type \t then press enter to edit ~/.tmux.conf
+    nnoremap    <leader>b :e ~/.bashrc
+                " Type \b then press enter to edit ~/.bashrc
+    nnoremap    <leader>ev :vsplit $MYVIMRC<cr>
+                " Type \ev to edit ~/.vimrc in spit panel
+    nnoremap    <leader>sv :source $MYVIMRC<cr>
+                " Type \sv to source ~/.vimrc
+    nnoremap    <leader>" viw<esc>a"<esc>hbi"<esc>lbl
+                " Type \" to double quote one word
+    nnoremap    <leader>' viw<esc>a'<esc>hbi'<esc>lbl
+                " Type \' to single quote one word
+    nnoremap    <leader>l" ^i"<esc>$a"<esc>^
+                " Type \l" to double quote one line
+    nnoremap    <leader>l' ^i'<esc>$a'<esc>^
+                " Type \l' to single quote one line
+    nnoremap    <leader><Left> :tabprevious<CR>
+                " Type \<Left> to switch to previous tab
+    nnoremap    <leader><Right> :tabnext<CR>
+                " Type \<Right> to switch next tab
+    nnoremap    <leader>t :tabnew<CR>
+                " Type \t to open a new tab and edit a new file
+    nnoremap    <leader>n :NERDTreeToggle<CR>
+                " Type \n to open NERDTree
+    nnoremap    <leader>p :CtrlP<CR>
+                " Type \n to open CtrlP
+    nnoremap    <leader>pd :CtrlPDir ~<CR>
+                " Type \n to open CtrlPDir [Ctrl + f/b to cycle between modes]
+    nnoremap    <leader>u viwu<esc>
+                " Type \u to convert to lower case
+    nnoremap    <leader>U viwU<esc>
+                " Type \U to convert to UPPER case
+    nnoremap    <space> za
+                " Type space to fold/unfold
 
 " ruler - show red blocks when length is over 80
     highlight OverLength ctermbg=red ctermfg=white guibg=#592929
     match OverLength /\%81v.\+/
 
 " autocmd for python
-	augroup filetype_python
-		autocmd!
-		autocmd BufRead,BufNewFile *.py set filetype=python
-		autocmd FileType python TagbarOpen
-		autocmd FileType python set tabstop=4
-		autocmd FileType python set shiftwidth=4
-		autocmd FileType python set expandtab
-		autocmd FileType python set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
-		autocmd FileType python :call CheckAndLoadTags()
-		autocmd FileType python TagbarOpen
-		autocmd FileType python iabbrev pythonHead #!/usr/bin/env python<cr># -*- coding: utf-8 -*-<cr>
-	augroup END
+    augroup filetype_python
+        autocmd!
+        autocmd BufRead,BufNewFile *.py set filetype=python
+        autocmd FileType python TagbarOpen
+        autocmd FileType python set tabstop=4
+        autocmd FileType python set shiftwidth=4
+        autocmd FileType python set expandtab
+        autocmd FileType python set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
+        autocmd FileType python :call CheckAndLoadTags()
+        autocmd FileType python TagbarOpen
+        autocmd FileType python iabbrev pythonHead #!/usr/bin/env python<cr># -*- coding: utf-8 -*-<cr>
+    augroup END
 
 " Autocmd for ctags
-	function! CheckAndLoadTags()
-		if file_readable("./tags")
-			set tag=tags
-		endif
-	endfunction
+    function! CheckAndLoadTags()
+        if file_readable("./tags")
+            set tag=tags
+        endif
+    endfunction
 
 " Auto load plugins
-	call vundle#end()            " required
-	filetype plugin indent on    " required
+    call vundle#end()            " required
+    filetype plugin indent on    " required
 
 " remove tailing spaces when save file
-	autocmd BufWritePre * :%s/\s\+$//e
+    autocmd BufWritePre * :%s/\s\+$//e
