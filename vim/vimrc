@@ -25,10 +25,6 @@
 	let g:airline#extensions#tabline#enabled = 1
 									" enable tabline
 
-" ruler - show red blocks when length is over 80
-	highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-	match OverLength /\%81v.\+/
-
 " Color settings
 	syntax on						" Show colors
 	set background=dark
@@ -85,6 +81,10 @@
 				" Type \U to convert to UPPER case
 	nnoremap	<space> za
 				" Type space to fold/unfold
+
+" ruler - show red blocks when length is over 80
+    highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+    match OverLength /\%81v.\+/
 
 " autocmd for python
 	augroup filetype_python
