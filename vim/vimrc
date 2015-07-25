@@ -81,6 +81,8 @@
                 " Type \U to convert to UPPER case
     nnoremap    <space> za
                 " Type space to fold/unfold
+    nnoremap    <Leader>r :retab<CR>
+                " Type \r to retab
 
 " ruler - show red blocks when length is over 80
     highlight OverLength ctermbg=red ctermfg=white guibg=#592929
