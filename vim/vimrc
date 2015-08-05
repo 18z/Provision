@@ -24,6 +24,7 @@
     Plugin 'bling/vim-airline'      " status line
     let g:airline#extensions#tabline#enabled = 1
                                     " enable tabline
+    Plugin 'vim-scripts/snipMate'   " snipMate
 
 " Color settings
     syntax on                       " Show colors
