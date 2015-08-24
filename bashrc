@@ -1,6 +1,7 @@
 export PS1="\[\e[00;37m\][\[\e[0m\]\[\e[00;33m\]\u\[\e[0m\]\[\e[00;37m\]@\[\e[0m\]\[\e[00;32m\]\H\[\e[0m\]\[\e[00;37m\]][\W][\[\e[0m\]\[\e[00;35m\]\$?\[\e[0m\]\[\e[00;37m\]] \\$ \[\e[0m\]"
 
 export EDITOR="vim"
+export LC_ALL=en_US.UTF-8
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
