@@ -10,6 +10,8 @@
     set laststatus=2                " Displaying status line always
     set foldmethod=indent           " method: manual, indent, syntax, expr
     set foldnestmax=5
+    set cursorline
+    set cursorcolumn
 
 " set the runtime path to include Vundle and initialize
     set rtp+=~/.vim/bundle/Vundle.vim
