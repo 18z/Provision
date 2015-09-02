@@ -98,7 +98,6 @@
     augroup filetype_python
         autocmd!
         autocmd BufRead,BufNewFile *.py set filetype=python
-        autocmd FileType python TagbarOpen
         autocmd FileType python set tabstop=4
         autocmd FileType python set shiftwidth=4
         autocmd FileType python set expandtab
@@ -114,6 +113,9 @@
         autocmd BufRead,BufNewFile *.c set filetype=c
         autocmd FileType c :call CheckAndLoadTags()
         autocmd FileType c TagbarOpen
+        "Tagbar generates the tag information by itself
+        "and doesn't need (or use)
+        "already existing tag files.
     augroup END
 
 " Autocmd for ctags
