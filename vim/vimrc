@@ -118,3 +118,6 @@
 
 " remove tailing spaces when save file
     autocmd BufWritePre * :%s/\s\+$//e
+
+" auto retab before saving file
+    autocmd BufWritePre * :retab
