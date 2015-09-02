@@ -112,7 +112,6 @@
     augroup filetype_c
         autocmd!
         autocmd BufRead,BufNewFile *.c set filetype=c
-        autocmd FileType c TagbarOpen
         autocmd FileType c :call CheckAndLoadTags()
         autocmd FileType c TagbarOpen
     augroup END
@@ -120,7 +119,7 @@
 " Autocmd for ctags
     function! CheckAndLoadTags()
         if file_readable("~/.ctags/tags")
-            set tag=tags
+            set tags=~/.ctags/tags
         endif
     endfunction
 
