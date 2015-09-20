@@ -11,9 +11,9 @@
                                     " |<<|, etc.
     set expandtab                   " Converting tabs to spaces
     set laststatus=2                " Displaying status line always
-    set foldmethod=indent           " method: manual, indent, syntax, expr
+    "set foldmethod=indent           " method: manual, indent, syntax, expr
     set foldnestmax=5
-    set cursorline
+    "set cursorline
     set cursorcolumn
 
 " set the runtime path to include Vundle and initialize
@@ -89,6 +89,7 @@
                 " Type space to fold/unfold
     nnoremap    <Leader>r :retab<CR>
                 " Type \r to retab
+    nnoremap    <Leader>it "=strftime("%c")<CR>P
 
 " ruler - show red blocks when length is over 80
     highlight OverLength ctermbg=red ctermfg=white guibg=#592929
@@ -115,12 +116,30 @@
         endif
     endfunction
 
+" If buffer modified, update any 'Last modified: ' in the first 20 lines.
+" 'Last modified: ' can have up to 10 characters before (they are retained).
+" Restores cursor and window position using save_cursor variable.
+    function! LastModified()
+        if &modified
+            let save_cursor = getpos(".")
+            let n = min([20, line("$")])
+            keepjumps exe '1,' . n . 's#^\(.\{,10}Last modified: \).*#\1' .
+                  \ strftime('%a %b %d, %Y  %I:%M%p') . '#e'
+            call histdel('search', -1)
+            call setpos('.', save_cursor)
+        endif
+    endfun
+
 " Auto load plugins
     call vundle#end()            " required
     filetype plugin indent on    " required
+
+" auto add timestamp to last modified
+    autocmd BufWritePre * call LastModified()
 
 " remove tailing spaces when save file
     autocmd BufWritePre * :%s/\s\+$//e
 
 " auto retab before saving file
     autocmd BufWritePre * :retab
+
