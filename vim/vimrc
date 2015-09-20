@@ -99,7 +99,6 @@
     augroup filetype_python
         autocmd!
         autocmd BufRead,BufNewFile *.py set filetype=python
-        autocmd FileType python TagbarOpen
         autocmd FileType python set tabstop=4
         autocmd FileType python set shiftwidth=4
         autocmd FileType python set expandtab
@@ -109,10 +108,21 @@
         autocmd FileType python iabbrev pythonHead #!/usr/bin/env python<cr># -*- coding: utf-8 -*-<cr>
     augroup END
 
+" autocmd for c
+    augroup filetype_c
+        autocmd!
+        autocmd BufRead,BufNewFile *.c set filetype=c
+        autocmd FileType c :call CheckAndLoadTags()
+        autocmd FileType c TagbarOpen
+        "Tagbar generates the tag information by itself
+        "and doesn't need (or use)
+        "already existing tag files.
+    augroup END
+
 " Autocmd for ctags
     function! CheckAndLoadTags()
-        if file_readable("./tags")
-            set tag=tags
+        if file_readable("~/.ctags/tags")
+            set tags=~/.ctags/tags
         endif
     endfunction
 
