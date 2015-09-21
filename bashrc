@@ -16,6 +16,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 alias checkwanip='curl ifconfig.me/ip'
+alias vim='/usr/local/Cellar/vim/7.4.865/bin/vim'
 
 function backup()
 {
