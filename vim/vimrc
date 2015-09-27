@@ -36,6 +36,7 @@
     let g:indentLine_color_term = 239
     let g:indentLine_enabled = 1
     Plugin 'vim-scripts/togglenumber'
+    Plugin 'axiaoxin/vim-json-line-format'
 
 " Color settings
     syntax on                       " Show colors
