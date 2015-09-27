@@ -101,6 +101,9 @@
     nnoremap    <Leader>tn :ToggleNumber<CR>
                 " Type \tn to change number mode
 
+                " Type \jp to preview formatted json
+                " Type \jw to write formatted json
+
 " ruler - show red blocks when length is over 80
     highlight OverLength ctermbg=red ctermfg=white guibg=#592929
     match OverLength /\%81v.\+/
