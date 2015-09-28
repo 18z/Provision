@@ -85,9 +85,9 @@
     nnoremap    <leader>n :NERDTreeToggle<CR>
                 " Type \n to open NERDTree
     nnoremap    <leader>p :CtrlP<CR>
-                " Type \n to open CtrlP
+                " Type \p to open CtrlP
     nnoremap    <leader>pd :CtrlPDir ~<CR>
-                " Type \n to open CtrlPDir [Ctrl + f/b to cycle between modes]
+                " Type \pd to open CtrlPDir [Ctrl + f/b to cycle between modes]
     nnoremap    <leader>u viwu<esc>
                 " Type \u to convert to lower case
     nnoremap    <leader>U viwU<esc>
