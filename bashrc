@@ -2,6 +2,8 @@ export PS1="\[\e[00;37m\][\[\e[0m\]\[\e[00;33m\]\u\[\e[0m\]\[\e[00;37m\]@\[\e[0m
 
 export EDITOR="vim"
 export LC_ALL=en_US.UTF-8
+
+# MAC ONLY
 export CLICOLOR=1
 
 # enable color support of ls and also add handy aliases
@@ -17,6 +19,10 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 alias checkwanip='curl ifconfig.me/ip'
+# MAC ONLY
+# You can command : echo has('conceal') in your vim, if it return 0.
+# That's why you can't see the indent line.
+# If so you can brew a new version vim which support conceal or patch this feature.
 alias vim='/usr/local/Cellar/vim/7.4.865/bin/vim'
 
 function backup()
