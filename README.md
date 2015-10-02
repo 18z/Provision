@@ -1,4 +1,4 @@
-Provisioning Debian
+Provisioning Work Env.
 =========
 
 These are settings that I feel comfortable to work with.
@@ -9,7 +9,7 @@ To provision working environment with these settings:
 
 ```bash
 $ sudo apt-get update
-$ sudo apt-get install git curl 
+$ sudo apt-get install git curl
 ```
 
 2 Clone other settings from github
