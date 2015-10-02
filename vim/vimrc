@@ -112,6 +112,7 @@
 
                 " Type \jp to preview formatted json
                 " Type \jw to write formatted json
+                " Type gq ap to reformat paragraphs
 
 " ruler - show red blocks when length is over 80
     highlight OverLength ctermbg=red ctermfg=white guibg=#592929
