@@ -103,8 +103,12 @@
                 " Type \it to insert timestamp
     nnoremap    <Leader>tn :ToggleNumber<CR>
                 " Type \tn to change number mode
-    nnoremap    <Leader>idf ::IndentLinesToggle<CR>
+    nnoremap    <Leader>idf :IndentLinesToggle<CR>
                 " Type \idf to turn on or off the indent lines
+    nnoremap    <Leader>sc :set spell spelllang=en_us<CR>
+                " Type \sc for spell checking
+    nnoremap    <Leader>nsc :set nospell<CR>
+                " Type \nsc to turn off checking
 
                 " Type \jp to preview formatted json
                 " Type \jw to write formatted json
