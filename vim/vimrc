@@ -114,6 +114,10 @@
                 " Type \jw to write formatted json
                 " Type gq ap to reformat paragraphs
 
+                " Type qa to start recording a macro named “a”
+                " Type q to stop recording
+                " Type @a to play back the macro
+
 " ruler - show red blocks when length is over 80
     highlight OverLength ctermbg=red ctermfg=white guibg=#592929
     match OverLength /\%81v.\+/
