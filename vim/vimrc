@@ -113,7 +113,8 @@
                 " Type \fp to reformat paragraph
     vnoremap    . :norm.<CR>
                 " Type . to apply the . command to execute a stored action
-                " against the selection.
+                " against the selection. The “.” allows us to simply
+                " re-execute that last command
 
                 " Type \jp to preview formatted json
                 " Type \jw to write formatted json
