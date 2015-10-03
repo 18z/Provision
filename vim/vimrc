@@ -109,10 +109,14 @@
                 " Type \sc for spell checking
     nnoremap    <Leader>nsc :set nospell<CR>
                 " Type \nsc to turn off checking
+    nnoremap    <Leader>fp gq<CR>
+                " Type \fp to reformat paragraph
+    vnoremap    . :norm.<CR>
+                " Type . to apply the . command to execute a stored action
+                " against the selection.
 
                 " Type \jp to preview formatted json
                 " Type \jw to write formatted json
-                " Type gq ap to reformat paragraphs
 
                 " Type qa to start recording a macro named “a”
                 " Type q to stop recording
