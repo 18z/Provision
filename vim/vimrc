@@ -41,6 +41,7 @@
                                     " modified, and where lines have been removed.
     Plugin 'tpope/vim-fugitive'     " Use git cmds in vim
     Plugin 'easymotion/vim-easymotion'
+    Plugin 'ervandew/supertab'
 
 " Color settings
     syntax on                       " Show colors
