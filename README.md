@@ -11,13 +11,13 @@ To provision working environment with these settings:
     You know how to do it. :D
     ```
 
-2. Install VIM settings
+2. VIM Configurations
 
     ```bash
     $ curl -o - https://raw.githubusercontent.com/deanboole/Provision/master/scripts/vim-install.sh | sh
     ```
 
-3. Bash environment
+3. Bash environment Configurations
 
     ```bash
     $ curl -o - https://raw.githubusercontent.com/deanboole/Provision/master/scripts/bashrc-install.sh | sh
@@ -26,8 +26,13 @@ To provision working environment with these settings:
 4. Git Configurations
 
     ```bash
-    git config --global core.editor "Your favorite text editor"
-    git config --global core.excludesfile '~/.gitignore'
+    $ curl -o - https://raw.githubusercontent.com/deanboole/Provision/master/scripts/git-install.sh | sh
+    ```
+
+5. Tmux Configurations
+
+    ```bash
+    $ curl -o - https://raw.githubusercontent.com/deanboole/Provision/master/scripts/tmux-install.sh | sh
     ```
 
 [download tmux](https://packages.debian.org/wheezy-backports/tmux)
