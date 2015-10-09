@@ -17,7 +17,13 @@ To provision working environment with these settings:
     $ curl -o - https://raw.githubusercontent.com/deanboole/Provision/master/scripts/vim-install.sh | sh
     ```
 
-3. Git Configurations
+3. Bash environment
+
+    ```bash
+    $ curl -o - https://raw.githubusercontent.com/deanboole/Provision/master/scripts/bashrc-install.sh | sh
+    ```
+
+4. Git Configurations
 
     ```bash
     git config --global core.editor "Your favorite text editor"
