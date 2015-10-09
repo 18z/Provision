@@ -21,3 +21,6 @@
 [user]
     name  = deanboole
     email = xspiritualx@gmail.com
+[core]
+    editor = vim
+    excludesfile = ~/.gitignore
