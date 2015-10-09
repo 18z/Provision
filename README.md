@@ -5,7 +5,7 @@ These are settings that I feel comfortable to work with.
 
 To provision working environment with these settings:
 
-1. Install Git and curl
+1. Install Git, curl and tmux
 
     ```
     You know how to do it. :D
