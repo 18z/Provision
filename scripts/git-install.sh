@@ -5,6 +5,10 @@
 # Show progress
     set -x
 
+# Download config files from github
+    cd ${HOME}
+    git clone https://github.com/deanboole/Provision
+
 # Install config files
     mkdir -p ~/.git/templates/hooks/
     ln -sf ${HOME}/Provision/git/gitconfig ${HOME}/.gitconfig
