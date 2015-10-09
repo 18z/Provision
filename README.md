@@ -7,9 +7,8 @@ To provision working environment with these settings:
 
 1. Install Git and curl
 
-    ```bash
-    $ sudo apt-get update
-    $ sudo apt-get install git curl
+    ```
+    You know how to do it. :D
     ```
 
 2. Install VIM settings
@@ -20,9 +19,9 @@ To provision working environment with these settings:
 
 3. Git Configurations
 
-```bash
-git config --global core.editor "Your favorite text editor"
-git config --global core.excludesfile '~/.gitignore'
-```
+    ```bash
+    git config --global core.editor "Your favorite text editor"
+    git config --global core.excludesfile '~/.gitignore'
+    ```
 
 [download tmux](https://packages.debian.org/wheezy-backports/tmux)
