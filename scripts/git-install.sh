@@ -6,8 +6,10 @@
     set -x
 
 # Download config files from github
-    cd ${HOME}
-    git clone https://github.com/deanboole/Provision
+    if [ ! -d "${HOME}/Provision" ]; then
+        cd ${HOME}
+        git clone https://github.com/deanboole/Provision
+    fi
 
 # Install config files
     mkdir -p ~/.git/templates/hooks/
