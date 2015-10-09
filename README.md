@@ -20,7 +20,7 @@ To provision working environment with these settings:
 3. Bash environment Configurations
 
     ```bash
-    $ curl -o - https://raw.githubusercontent.com/deanboole/Provision/master/scripts/bashrc-install.sh | sh
+    $ curl -o - https://raw.githubusercontent.com/deanboole/Provision/master/scripts/bashrc_install.sh | sh
     ```
 
 4. Git Configurations
