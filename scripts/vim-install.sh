@@ -24,4 +24,5 @@
     fi
 
 # Install vim plugin (for vundle)
-    vim +PluginInstall +qall
+#    vim +PluginInstall +qall
+    echo "Open vim editor and use :PluginInstall to install plugins"
