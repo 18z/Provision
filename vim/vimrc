@@ -16,6 +16,9 @@
     "set cursorline
     set cursorcolumn
     set backspace=indent,eol,start
+    set backup                      " need to create ~/.vim/backup first
+    set backupdir=~/.vim/backup     " file~
+    set directory=~/.vim/backup     " swap file
 
 " set the runtime path to include Vundle and initialize
     set rtp+=~/.vim/bundle/Vundle.vim
