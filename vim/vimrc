@@ -1,194 +1,199 @@
 " General settings
-    set nocompatible                " Vim does not imitate vi
-    filetype plugin indent  on      " Detect file type, load plugins, etc
-    set number                      " Show line numbers
-    set hlsearch                    " High light search results
-    set encoding=utf-8
-    set tabstop=4                   " Number of spaces that a <Tab> in the file
-                                    " counts for.
-    set shiftwidth=4                " Number of spaces to use for each step of
-                                    " (auto)indent.  Used for |'cindent'|, |>>|,
-                                    " |<<|, etc.
-    set expandtab                   " Converting tabs to spaces
-    set laststatus=2                " Displaying status line always
-    "set foldmethod=indent           " method: manual, indent, syntax, expr
-    set foldnestmax=5
-    "set cursorline
-    set cursorcolumn
-    set backspace=indent,eol,start
-    set backup                      " need to create ~/.vim/backup first
-    set backupdir=~/.vim/backup     " file~
-    set directory=~/.vim/backup     " swap file
+set nocompatible                " Vim does not imitate vi
+filetype plugin indent  on      " Detect file type, load plugins, etc
+set number                      " Show line numbers
+set hlsearch                    " High light search results
+set encoding=utf-8
+set tabstop=4                   " Number of spaces that a <Tab> in the file
+" counts for.
+set shiftwidth=4                " Number of spaces to use for each step of
+" (auto)indent.  Used for |'cindent'|, |>>|,
+" |<<|, etc.
+set expandtab                   " Converting tabs to spaces
+set laststatus=2                " Displaying status line always
+"set foldmethod=indent           " method: manual, indent, syntax, expr
+set foldnestmax=5
+"set cursorline
+set cursorcolumn
+set backspace=indent,eol,start
+set backup                      " need to create ~/.vim/backup first
+set backupdir=~/.vim/backup     " file~
+set directory=~/.vim/backup     " swap file
 
 " set the runtime path to include Vundle and initialize
-    set rtp+=~/.vim/bundle/Vundle.vim
-    call vundle#begin()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-    Plugin 'gmarik/vundle'          " let Vundle manage Vundle, required
-    Plugin 'majutsushi/tagbar'      " :TagbarToggle
-    Plugin 'tpope/vim-markdown'     " markdown
-    Plugin 'vim-scripts/tComment'   " tComment (Type gcc to comment)
-    Plugin 'scrooloose/nerdtree'    " file manager
-    Plugin 'kien/ctrlp.vim'         " powerful file searcher
-    Plugin 'bling/vim-airline'      " status line
-    let g:airline#extensions#tabline#enabled = 1
-                                    " enable tabline
-    Plugin 'vim-scripts/snipMate'   " snipMate
-    Plugin 'Yggdroot/indentLine'    " indentLine
-    let g:indentLine_char = '¦'     " line character
-    let g:indentLine_color_term = 239
-    let g:indentLine_enabled = 1
-    Plugin 'vim-scripts/togglenumber'
-    "Plugin 'axiaoxin/vim-json-line-format'
-    Plugin 'airblade/vim-gitgutter' " It shows whether each line has been added,
-                                    " modified, and where lines have been removed.
-    Plugin 'tpope/vim-fugitive'     " Use git cmds in vim
-    Plugin 'easymotion/vim-easymotion'
-    Plugin 'ervandew/supertab'      " insert a literal <Tab> with <C-v><Tab>
+Plugin 'gmarik/vundle'          " let Vundle manage Vundle, required
+Plugin 'majutsushi/tagbar'      " :TagbarToggle
+Plugin 'tpope/vim-markdown'     " markdown
+Plugin 'vim-scripts/tComment'   " tComment (Type gcc to comment)
+Plugin 'scrooloose/nerdtree'    " file manager
+Plugin 'kien/ctrlp.vim'         " powerful file searcher
+Plugin 'bling/vim-airline'      " status line
+let g:airline#extensions#tabline#enabled = 1
+" enable tabline
+Plugin 'vim-scripts/snipMate'   " snipMate
+Plugin 'Yggdroot/indentLine'    " indentLine
+let g:indentLine_char = '¦'     " line character
+let g:indentLine_color_term = 239
+let g:indentLine_enabled = 1
+Plugin 'vim-scripts/togglenumber'
+"Plugin 'axiaoxin/vim-json-line-format'
+Plugin 'airblade/vim-gitgutter' " It shows whether each line has been added,
+" modified, and where lines have been removed.
+Plugin 'tpope/vim-fugitive'     " Use git cmds in vim
+Plugin 'easymotion/vim-easymotion'
+Plugin 'ervandew/supertab'      " insert a literal <Tab> with <C-v><Tab>
+Plugin 'Chiel92/vim-autoformat' " C file autoformat
 
 " Color settings
-    syntax on                       " Show colors
-    set background=dark
-    colorscheme vividchalk
-    set t_Co=256
+syntax on                       " Show colors
+set background=dark
+colorscheme vividchalk
+set t_Co=256
 
 " Keymap settings
-    " nnoremap n:normal mode, nore:no recursive, map:map
-    nnoremap    <leader>2 :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
-                " Type \2 to show tabs and spaces
-    nnoremap    <leader>3 :set invpaste paste?<CR>
-                " Type \3 to enable/disable paste mode
-    nnoremap    <leader>4 :set invnumber<CR>
-                " Type \4 to show/not show line numbers
-    nnoremap    <leader>5 :set hls!<CR>:set hls?<CR>
-                " Type \5 to highlight/not highlight search results
-    nnoremap    <leader>6 :set ignorecase!<CR>:set ignorecase?<CR>
-                " Type \6 to search keyword with case ignorance
-    nnoremap    <leader>7 :TagbarToggle<CR>
-                " Type \7 to open tagbar
-    nnoremap    <leader>v :e ~/.vimrc
-                " Type \v then press enter to edit ~/.vimrc
-    nnoremap    <leader>t :e ~/.tmux.conf
-                " Type \t then press enter to edit ~/.tmux.conf
-    nnoremap    <leader>b :e ~/.bashrc
-                " Type \b then press enter to edit ~/.bashrc
-    nnoremap    <leader>ev :vsplit $MYVIMRC<cr>
-                " Type \ev to edit ~/.vimrc in spit panel
-    nnoremap    <leader>sv :source $MYVIMRC<cr>
-                " Type \sv to source ~/.vimrc
-    nnoremap    <leader>" viw<esc>a"<esc>hbi"<esc>lbl
-                " Type \" to double quote one word
-    nnoremap    <leader>' viw<esc>a'<esc>hbi'<esc>lbl
-                " Type \' to single quote one word
-    nnoremap    <leader>l" ^i"<esc>$a"<esc>^
-                " Type \l" to double quote one line
-    nnoremap    <leader>l' ^i'<esc>$a'<esc>^
-                " Type \l' to single quote one line
-    nnoremap    <leader><Left> :tabprevious<CR>
-                " Type \<Left> to switch to previous tab
-    nnoremap    <leader><Right> :tabnext<CR>
-                " Type \<Right> to switch next tab
-    nnoremap    <leader>t :tabnew<CR>
-                " Type \t to open a new tab and edit a new file
-    nnoremap    <leader>n :NERDTreeToggle<CR>
-                " Type \n to open NERDTree
-    nnoremap    <leader>p :CtrlP<CR>
-                " Type \p to open CtrlP
-    nnoremap    <leader>pd :CtrlPDir ~<CR>
-                " Type \pd to open CtrlPDir [Ctrl + f/b to cycle between modes]
-    nnoremap    <leader>u viwu<esc>
-                " Type \u to convert to lower case
-    nnoremap    <leader>U viwU<esc>
-                " Type \U to convert to UPPER case
-    nnoremap    <space> za
-                " Type space to fold/unfold
-    nnoremap    <Leader>r :retab<CR>
-                " Type \r to retab
-    nnoremap    <Leader>it "=strftime("%c")<CR>P
-                " Type \it to insert timestamp
-    nnoremap    <Leader>tn :ToggleNumber<CR>
-                " Type \tn to change number mode
-    nnoremap    <Leader>idf :IndentLinesToggle<CR>
-                " Type \idf to turn on or off the indent lines
-    nnoremap    <Leader>sc :set spell spelllang=en_us<CR>
-                " Type \sc for spell checking
-    nnoremap    <Leader>nsc :set nospell<CR>
-                " Type \nsc to turn off checking
-    nnoremap    <Leader>fp gq<CR>
-                " Type \fp to reformat paragraph
-    vnoremap    . :norm.<CR>
-                " Type . to apply the . command to execute a stored action
-                " against the selection. The “.” allows us to simply
-                " re-execute that last command
+" nnoremap n:normal mode, nore:no recursive, map:map
+nnoremap    <leader>2 :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
+" Type \2 to show tabs and spaces
+nnoremap    <leader>3 :set invpaste paste?<CR>
+" Type \3 to enable/disable paste mode
+nnoremap    <leader>4 :set invnumber<CR>
+" Type \4 to show/not show line numbers
+nnoremap    <leader>5 :set hls!<CR>:set hls?<CR>
+" Type \5 to highlight/not highlight search results
+nnoremap    <leader>6 :set ignorecase!<CR>:set ignorecase?<CR>
+" Type \6 to search keyword with case ignorance
+nnoremap    <leader>7 :TagbarToggle<CR>
+" Type \7 to open tagbar
+nnoremap    <leader>8 :Autoformat<CR>
+" Type \8 to autoformat C
+nnoremap    <leader>v :e ~/.vimrc
+" Type \v then press enter to edit ~/.vimrc
+nnoremap    <leader>t :e ~/.tmux.conf
+" Type \t then press enter to edit ~/.tmux.conf
+nnoremap    <leader>b :e ~/.bashrc
+" Type \b then press enter to edit ~/.bashrc
+nnoremap    <leader>ev :vsplit $MYVIMRC<cr>
+" Type \ev to edit ~/.vimrc in spit panel
+nnoremap    <leader>sv :source $MYVIMRC<cr>
+" Type \sv to source ~/.vimrc
+nnoremap    <leader>" viw<esc>a"<esc>hbi"<esc>lbl
+" Type \" to double quote one word
+nnoremap    <leader>' viw<esc>a'<esc>hbi'<esc>lbl
+" Type \' to single quote one word
+nnoremap    <leader>l" ^i"<esc>$a"<esc>^
+" Type \l" to double quote one line
+nnoremap    <leader>l' ^i'<esc>$a'<esc>^
+" Type \l' to single quote one line
+nnoremap    <leader><Left> :tabprevious<CR>
+" Type \<Left> to switch to previous tab
+nnoremap    <leader><Right> :tabnext<CR>
+" Type \<Right> to switch next tab
+nnoremap    <leader>t :tabnew<CR>
+" Type \t to open a new tab and edit a new file
+nnoremap    <leader>n :NERDTreeToggle<CR>
+" Type \n to open NERDTree
+nnoremap    <leader>p :CtrlP<CR>
+" Type \p to open CtrlP
+nnoremap    <leader>pd :CtrlPDir ~<CR>
+" Type \pd to open CtrlPDir [Ctrl + f/b to cycle between modes]
+nnoremap    <leader>u viwu<esc>
+" Type \u to convert to lower case
+nnoremap    <leader>U viwU<esc>
+" Type \U to convert to UPPER case
+nnoremap    <space> za
+" Type space to fold/unfold
+nnoremap    <Leader>r :retab<CR>
+" Type \r to retab
+nnoremap    <Leader>it "=strftime("%c")<CR>P
+" Type \it to insert timestamp
+nnoremap    <Leader>tn :ToggleNumber<CR>
+" Type \tn to change number mode
+nnoremap    <Leader>idf :IndentLinesToggle<CR>
+" Type \idf to turn on or off the indent lines
+nnoremap    <Leader>sc :set spell spelllang=en_us<CR>
+" Type \sc for spell checking
+nnoremap    <Leader>nsc :set nospell<CR>
+" Type \nsc to turn off checking
+nnoremap    <Leader>fp gq<CR>
+" Type \fp to reformat paragraph
+vnoremap    . :norm.<CR>
+" Type . to apply the . command to execute a stored action
+" against the selection. The “.” allows us to simply
+" re-execute that last command
 
-                " Type \jp to preview formatted json
-                " Type \jw to write formatted json
+" Type \jp to preview formatted json
+" Type \jw to write formatted json
 
-                " Type qa to start recording a macro named “a”
-                " Type q to stop recording
-                " Type @a to play back the macro
+" Type qa to start recording a macro named “a”
+" Type q to stop recording
+" Type @a to play back the macro
 
-                " Type \\w for easymotion
+" Type \\w for easymotion
 
 " ruler - show red blocks when length is over 80
-    highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-    match OverLength /\%81v.\+/
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
 
 " autocmd for python
-    augroup filetype_python
-        autocmd!
-        autocmd BufRead,BufNewFile *.py set filetype=python
-        autocmd FileType python set tabstop=4
-        autocmd FileType python set shiftwidth=4
-        autocmd FileType python set expandtab
-        autocmd FileType python set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
-        autocmd FileType python :call CheckAndLoadTags()
-        autocmd FileType python TagbarOpen
-        autocmd FileType python iabbrev pythonHead #!/usr/bin/env python<cr># -*- coding: utf-8 -*-<cr>
-    augroup END
+augroup filetype_python
+    autocmd!
+    autocmd BufRead,BufNewFile *.py set filetype=python
+    autocmd FileType python set tabstop=4
+    autocmd FileType python set shiftwidth=4
+    autocmd FileType python set expandtab
+    autocmd FileType python set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
+    autocmd FileType python :call CheckAndLoadTags()
+    autocmd FileType python TagbarOpen
+    autocmd FileType python iabbrev pythonHead #!/usr/bin/env python<cr># -*- coding: utf-8 -*-<cr>
+augroup END
 
 " autocmd for c
-    augroup filetype_c
-        autocmd!
-        autocmd BufRead,BufNewFile *.c set filetype=c
-        autocmd FileType c :call CheckAndLoadTags()
-        autocmd FileType c TagbarOpen
-        "Tagbar generates the tag information by itself
-        "and doesn't need (or use)
-        "already existing tag files.
-    augroup END
+augroup filetype_c
+    autocmd!
+    autocmd BufRead,BufNewFile *.c set filetype=c
+    autocmd FileType c :call CheckAndLoadTags()
+    autocmd FileType c TagbarOpen
+    "Tagbar generates the tag information by itself
+    "and doesn't need (or use)
+    "already existing tag files.
+augroup END
 
 " Autocmd for ctags
-    function! CheckAndLoadTags()
-        if file_readable("~/.ctags/tags")
-            set tags=~/.ctags/tags
-        endif
-    endfunction
+function! CheckAndLoadTags()
+    if file_readable("~/.ctags/tags")
+        set tags=~/.ctags/tags
+    endif
+endfunction
 
 " If buffer modified, update any 'Last modified: ' in the first 20 lines.
 " 'Last modified: ' can have up to 10 characters before (they are retained).
 " Restores cursor and window position using save_cursor variable.
-    function! LastModified()
-        if &modified
-            let save_cursor = getpos(".")
-            let n = min([20, line("$")])
-            keepjumps exe '1,' . n . 's#^\(.\{,10}Last modified: \).*#\1' .
-                  \ strftime('%a %b %d, %Y  %I:%M%p') . '#e'
-            call histdel('search', -1)
-            call setpos('.', save_cursor)
-        endif
-    endfun
+function! LastModified()
+    if &modified
+        let save_cursor = getpos(".")
+        let n = min([20, line("$")])
+        keepjumps exe '1,' . n . 's#^\(.\{,10}Last modified: \).*#\1' .
+                    \ strftime('%a %b %d, %Y  %I:%M%p') . '#e'
+        call histdel('search', -1)
+        call setpos('.', save_cursor)
+    endif
+endfun
 
 " Auto load plugins
-    call vundle#end()            " required
-    filetype plugin indent on    " required
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 " auto add timestamp to last modified
-    autocmd BufWritePre * call LastModified()
+autocmd BufWritePre * call LastModified()
 
-" remove tailing spaces when save file
-    autocmd BufWritePre * :%s/\s\+$//e
+" remove tailing spaces upon saving the file
+autocmd BufWritePre * :%s/\s\+$//e
 
-" auto retab before saving file
-    autocmd BufWritePre * :retab
+" auto retab upon saving the file
+autocmd BufWritePre * :retab
 
+" auto format C upon saving the file
+autocmd BufWrite * :Autoformat
