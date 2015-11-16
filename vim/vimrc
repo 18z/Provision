@@ -5,10 +5,10 @@ set number                      " Show line numbers
 set hlsearch                    " High light search results
 set encoding=utf-8
 set tabstop=4                   " Number of spaces that a <Tab> in the file
-" counts for.
+                                " counts for.
 set shiftwidth=4                " Number of spaces to use for each step of
-" (auto)indent.  Used for |'cindent'|, |>>|,
-" |<<|, etc.
+                                " (auto)indent.  Used for |'cindent'|, |>>|,
+                                " |<<|, etc.
 set expandtab                   " Converting tabs to spaces
 set laststatus=2                " Displaying status line always
 "set foldmethod=indent           " method: manual, indent, syntax, expr
@@ -32,16 +32,16 @@ Plugin 'scrooloose/nerdtree'    " file manager
 Plugin 'kien/ctrlp.vim'         " powerful file searcher
 Plugin 'bling/vim-airline'      " status line
 let g:airline#extensions#tabline#enabled = 1
-" enable tabline
+                                " enable tabline
 Plugin 'vim-scripts/snipMate'   " snipMate
 Plugin 'Yggdroot/indentLine'    " indentLine
 let g:indentLine_char = '¦'     " line character
 let g:indentLine_color_term = 239
 let g:indentLine_enabled = 1
 Plugin 'vim-scripts/togglenumber'
-"Plugin 'axiaoxin/vim-json-line-format'
+                                "Plugin 'axiaoxin/vim-json-line-format'
 Plugin 'airblade/vim-gitgutter' " It shows whether each line has been added,
-" modified, and where lines have been removed.
+                                " modified, and where lines have been removed.
 Plugin 'tpope/vim-fugitive'     " Use git cmds in vim
 Plugin 'easymotion/vim-easymotion'
 Plugin 'ervandew/supertab'      " insert a literal <Tab> with <C-v><Tab>
