@@ -196,4 +196,4 @@ autocmd BufWritePre * :%s/\s\+$//e
 autocmd BufWritePre * :retab
 
 " auto format C upon saving the file
-autocmd BufWrite * :Autoformat
+"autocmd BufWrite * :Autoformat
