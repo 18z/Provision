@@ -11,13 +11,15 @@
         git clone https://github.com/deanboole/Provision
     fi
 
+# Create backup folder
+    mkdir -p ~/.vim/backup
+
 # Install config files
     ln -sf ${HOME}/Provision/vim/vimrc ${HOME}/.vimrc
 
 # Install color scheme
     mkdir -p ${HOME}/.vim/colors
     ln -sf ${HOME}/Provision/vim/colors/vividchalk.vim ${HOME}/.vim/colors
-
 
 # Vundle installation
     if [ ! -d "${HOME}/.vim/bundle/Vundle.vim" ]; then
