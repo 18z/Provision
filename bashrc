@@ -23,7 +23,7 @@ alias checkwanip='curl ifconfig.me/ip'
 # You can command : echo has('conceal') in your vim, if it return 0.
 # That's why you can't see the indent line.
 # If so you can brew a new version vim which support conceal or patch this feature.
-alias vim='/usr/local/Cellar/vim/7.4.865/bin/vim'
+#alias vim='/usr/local/Cellar/vim/7.4.865/bin/vim'
 
 function backup()
 {
