@@ -25,6 +25,9 @@ alias checkwanip='curl ifconfig.me/ip'
 # If so you can brew a new version vim which support conceal or patch this feature.
 #alias vim='/usr/local/Cellar/vim/7.4.865/bin/vim'
 
+alias pp="column -s ';' -t"
+alias ppp="column -s ':' -t"
+
 function backup()
 {
     cp $1 $1.bak
