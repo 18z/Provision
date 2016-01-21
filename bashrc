@@ -27,6 +27,7 @@ alias checkwanip='curl ifconfig.me/ip'
 
 alias pp="column -s ';' -t"
 alias ppp="column -s ':' -t"
+alias cdp="cd $OLDPWD"
 
 function backup()
 {
