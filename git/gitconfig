@@ -19,7 +19,7 @@
 [init]
     templatedir = ~/.git/templates
 [user]
-    name  = deanboole
+    name  = 18z
     email = xspiritualx@gmail.com
 [core]
     editor = vim
