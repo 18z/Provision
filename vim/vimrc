@@ -46,6 +46,8 @@ Plugin 'tpope/vim-fugitive'     " Use git cmds in vim
 Plugin 'easymotion/vim-easymotion'
 "Plugin 'ervandew/supertab'      " insert a literal <Tab> with <C-v><Tab>
 Plugin 'Chiel92/vim-autoformat' " C file autoformat
+Plugin 'davidhalter/jedi-vim'
+" let g:jedi#completions_enabled = 1
 
 " Color settings
 syntax on                       " Show colors
