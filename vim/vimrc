@@ -46,8 +46,17 @@ Plugin 'tpope/vim-fugitive'     " Use git cmds in vim
 Plugin 'easymotion/vim-easymotion'
 "Plugin 'ervandew/supertab'      " insert a literal <Tab> with <C-v><Tab>
 Plugin 'Chiel92/vim-autoformat' " C file autoformat
-Plugin 'davidhalter/jedi-vim'
+Plugin 'davidhalter/jedi-vim'   " Python AutoComplete
 " let g:jedi#completions_enabled = 1
+Plugin 'scrooloose/syntastic'   " Syntax Checker
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " Color settings
 syntax on                       " Show colors
