@@ -63,6 +63,8 @@ let g:syntastic_check_on_wq = 0
 " Plugin '18z/infoparser'
 Plugin 'andviro/flake8-vim'
 " let g:PyFlakeOnWrite = 1
+Plugin 'vim-scripts/cscope.vim'
+nnoremap  <leader>fs :call cscope#find('s', expand('<cword>'))<CR>
 
 " Color settings
 syntax on                       " Show colors
@@ -137,6 +139,24 @@ nnoremap    <Leader>nsc :set nospell<CR>
 nnoremap    <Leader>fp gq<CR>
 " Type \fp to reformat paragraph
 nnoremap    <Leader>sx :call Parse()<CR>
+" Type \sx to parse info (18z/infoparser)
+nnoremap    <leader>fs :call cscope#find('s', expand('<cword>'))<CR>
+" s: Find this C symbol
+nnoremap    <leader>fg :call cscope#find('g', expand('<cword>'))<CR>
+" g: Find this definition
+nnoremap    <leader>fd :call cscope#find('d', expand('<cword>'))<CR>
+" d: Find functions called by this function
+nnoremap    <leader>fc :call cscope#find('c', expand('<cword>'))<CR>
+" c: Find functions calling this function
+nnoremap    <leader>ft :call cscope#find('t', expand('<cword>'))<CR>
+" t: Find this text string
+nnoremap    <leader>fe :call cscope#find('e', expand('<cword>'))<CR>
+" e: Find this egrep pattern
+nnoremap    <leader>ff :call cscope#find('f', expand('<cword>'))<CR>
+" f: Find this file
+nnoremap    <leader>fi :call cscope#find('i', expand('<cword>'))<CR>
+" i: Find files #including this file
+
 vnoremap    . :norm.<CR>
 " Type . to apply the . command to execute a stored action
 " against the selection. The “.” allows us to simply
