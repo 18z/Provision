@@ -64,7 +64,6 @@ let g:syntastic_check_on_wq = 0
 Plugin 'andviro/flake8-vim'
 " let g:PyFlakeOnWrite = 1
 Plugin 'vim-scripts/cscope.vim'
-nnoremap  <leader>fs :call cscope#find('s', expand('<cword>'))<CR>
 
 " Color settings
 syntax on                       " Show colors
