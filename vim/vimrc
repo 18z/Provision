@@ -58,6 +58,12 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+" Plugin 'zdict/zdict.vim'
+" let g:zdict_query_key = '<leader>z'
+" Plugin '18z/infoparser'
+Plugin 'andviro/flake8-vim'
+" let g:PyFlakeOnWrite = 1
+
 " Color settings
 syntax on                       " Show colors
 set background=dark
@@ -130,6 +136,7 @@ nnoremap    <Leader>nsc :set nospell<CR>
 " Type \nsc to turn off checking
 nnoremap    <Leader>fp gq<CR>
 " Type \fp to reformat paragraph
+nnoremap    <Leader>sx :call Parse()<CR>
 vnoremap    . :norm.<CR>
 " Type . to apply the . command to execute a stored action
 " against the selection. The “.” allows us to simply
@@ -208,3 +215,6 @@ autocmd BufWritePre * :retab
 
 " auto format C upon saving the file
 "autocmd BufWrite * :Autoformat
+"
+" auto format Python upon saving the file
+autocmd BufWritePost *.py :PyFlakeAuto
