@@ -29,6 +29,18 @@ Plugin 'majutsushi/tagbar'      " :TagbarToggle
 Plugin 'tpope/vim-markdown'     " markdown
 Plugin 'vim-scripts/tComment'   " tComment (Type gcc to comment)
 Plugin 'scrooloose/nerdtree'    " file manager
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ "Unknown"   : "?"
+    \ }
 Plugin 'kien/ctrlp.vim'         " powerful file searcher
 Plugin 'bling/vim-airline'      " status line
 let g:airline#extensions#tabline#enabled = 1
@@ -111,7 +123,7 @@ nnoremap    <leader><Right> :tabnext<CR>
 " Type \<Right> to switch next tab
 nnoremap    <leader>t :tabnew<CR>
 " Type \t to open a new tab and edit a new file
-nnoremap    <leader>n :NERDTreeToggle<CR>
+nnoremap    <leader>gn :NERDTreeToggle<CR>
 " Type \n to open NERDTree
 nnoremap    <leader>p :CtrlP<CR>
 " Type \p to open CtrlP
