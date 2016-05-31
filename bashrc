@@ -28,6 +28,7 @@ alias checkwanip='curl ifconfig.me/ip'
 alias pp="column -s ';' -t"
 alias ppp="column -s ':' -t"
 alias cdp="cd $OLDPWD"
+alias rmpyc="find -name "*.pyc" -exec rm {} \;"
 
 function backup()
 {
@@ -40,6 +41,7 @@ function extract()      # Handy Extract Program
         case $1 in
             *.tar.bz2)   tar xvjf $1     ;;
             *.tar.gz)    tar xvzf $1     ;;
+            *.tar.xz)    tar Jxvf $1     ;;
             *.bz2)       bunzip2 $1      ;;
             *.rar)       unrar x $1      ;;
             *.gz)        gunzip $1       ;;
@@ -55,3 +57,4 @@ function extract()      # Handy Extract Program
         echo "'$1' is not a valid file!"
     fi
 }
+
