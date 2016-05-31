@@ -76,6 +76,8 @@ let g:syntastic_check_on_wq = 0
 Plugin 'andviro/flake8-vim'
 " let g:PyFlakeOnWrite = 1
 Plugin 'vim-scripts/cscope.vim'
+Plugin 'terryma/vim-multiple-cursors'
+
 
 " Color settings
 syntax on                       " Show colors
