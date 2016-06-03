@@ -13,6 +13,8 @@
     unassumeall = "!git assumed | xargs git update-index --no-assume-unchanged"
     assumeall = "!git st -s | awk {'print $2'} | xargs git assume"
     snapshot = !git stash save "snapshot: $(date)" && git stash apply "stash@{0}"
+    url =! bash -c 'git config --get remote.origin.url | sed -E "s/.+:\\(.+\\)\\.git$/https:\\\\1/g"'
+
 [color]
     status = always
     ui = true
