@@ -77,7 +77,8 @@ Plugin 'andviro/flake8-vim'
 " let g:PyFlakeOnWrite = 1
 Plugin 'vim-scripts/cscope.vim'
 Plugin 'terryma/vim-multiple-cursors'
-
+Plugin 'sjl/gundo.vim'
+Plugin 'tpope/vim-surround'
 
 " Color settings
 syntax on                       " Show colors
@@ -169,7 +170,8 @@ nnoremap    <leader>ff :call cscope#find('f', expand('<cword>'))<CR>
 " f: Find this file
 nnoremap    <leader>fi :call cscope#find('i', expand('<cword>'))<CR>
 " i: Find files #including this file
-
+nnoremap    <leader>o   :!echo `git url`/blob/`git rev-parse --abbrev-ref HEAD`/%\#L<C-R>=line('.')<CR> \| xargs firefox<CR><CR>
+" open line in github
 vnoremap    . :norm.<CR>
 " Type . to apply the . command to execute a stored action
 " against the selection. The “.” allows us to simply
