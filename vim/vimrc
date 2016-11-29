@@ -13,7 +13,7 @@ set expandtab                   " Converting tabs to spaces
 set laststatus=2                " Displaying status line always
 "set foldmethod=indent           " method: manual, indent, syntax, expr
 set foldnestmax=5
-"set cursorline
+set cursorline
 set cursorcolumn
 set backspace=indent,eol,start
 set backup                      " need to create ~/.vim/backup first
@@ -185,6 +185,11 @@ vnoremap    . :norm.<CR>
 " Type @a to play back the macro
 
 " Type \\w for easymotion
+
+" Use upper J to move down visual block
+vnoremap J :m '>+1<CR>gv=gv
+" Use upper K to move down visual block
+vnoremap K :m '<-2<CR>gv=gv
 
 " ruler - show red blocks when length is over 80
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
