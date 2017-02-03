@@ -57,7 +57,7 @@ Plugin 'airblade/vim-gitgutter' " It shows whether each line has been added,
 Plugin 'tpope/vim-fugitive'     " Use git cmds in vim
 Plugin 'easymotion/vim-easymotion'
 "Plugin 'ervandew/supertab'      " insert a literal <Tab> with <C-v><Tab>
-Plugin 'Chiel92/vim-autoformat' " C file autoformat
+Plugin 'Chiel92/vim-autoformat' " C, Python files autoformat (use ale for vim8)
 Plugin 'davidhalter/jedi-vim'   " Python AutoComplete
 " let g:jedi#completions_enabled = 1
 Plugin 'scrooloose/syntastic'   " Syntax Checker
@@ -73,7 +73,7 @@ let g:syntastic_check_on_wq = 0
 " Plugin 'zdict/zdict.vim'
 " let g:zdict_query_key = '<leader>z'
 " Plugin '18z/infoparser'
-Plugin 'andviro/flake8-vim'
+" Plugin 'andviro/flake8-vim'
 " let g:PyFlakeOnWrite = 1
 Plugin 'vim-scripts/cscope.vim'
 Plugin 'terryma/vim-multiple-cursors'
@@ -253,8 +253,8 @@ autocmd BufWritePre * :%s/\s\+$//e
 " auto retab upon saving the file
 autocmd BufWritePre * :retab
 
-" auto format C upon saving the file
-"autocmd BufWrite * :Autoformat
+" auto format C, python files upon saving
+autocmd BufWrite * :Autoformat
 "
 " auto format Python upon saving the file
-autocmd BufWritePost *.py :PyFlakeAuto
+" autocmd BufWritePost *.py :PyFlakeAuto
