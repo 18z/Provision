@@ -61,7 +61,7 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'Chiel92/vim-autoformat' " C, Python files autoformat (use ale for vim8)
 Plugin 'davidhalter/jedi-vim'   " Python AutoComplete
 " let g:jedi#completions_enabled = 1
-Plugin 'scrooloose/syntastic'   " Syntax Checker
+" Plugin 'scrooloose/syntastic'   " Syntax Checker
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -87,6 +87,7 @@ Plugin 'fisadev/vim-isort'      " Vim plugin to sort python imports
 syntax on                       " Show colors
 set background=dark
 colorscheme luthadel
+" colorscheme vividchalk
 set t_Co=256
 
 " Keymap settings
@@ -148,9 +149,6 @@ nnoremap    <leader>gn  :NERDTreeToggle<CR>
 
 " Type \p to open CtrlP
 nnoremap    <leader>p   :CtrlP<CR>
-
-" Type \pd to open CtrlPDir [Ctrl + f/b to cycle between modes]
-nnoremap    <leader>pd  :CtrlPDir ~<CR>
 
 " Type \u to convert to lower case
 nnoremap    <leader>u   viwu<esc>
