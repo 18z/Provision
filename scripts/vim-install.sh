@@ -19,7 +19,7 @@
 
 # Install color scheme
     mkdir -p ${HOME}/.vim/colors
-    ln -sf ${HOME}/Provision/vim/colors/vividchalk.vim ${HOME}/.vim/colors
+    ln -sf ${HOME}/Provision/vim/colors/luthadel.vim ${HOME}/.vim/colors
 
 # Vundle installation
     if [ ! -d "${HOME}/.vim/bundle/Vundle.vim" ]; then
