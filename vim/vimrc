@@ -5,10 +5,10 @@ set number                      " Show line numbers
 set hlsearch                    " High light search results
 set encoding=utf-8
 set tabstop=4                   " Number of spaces that a <Tab> in the file
-" counts for.
+                                " counts for.
 set shiftwidth=4                " Number of spaces to use for each step of
-" (auto)indent.  Used for |'cindent'|, |>>|,
-" |<<|, etc.
+                                " (auto)indent.  Used for |'cindent'|, |>>|,
+                                " |<<|, etc.
 set expandtab                   " Converting tabs to spaces
 set laststatus=2                " Displaying status line always
 "set foldmethod=indent           " method: manual, indent, syntax, expr
@@ -19,6 +19,7 @@ set backspace=indent,eol,start
 set backup                      " need to create ~/.vim/backup first
 set backupdir=~/.vim/backup     " file~
 set directory=~/.vim/backup     " swap file
+set splitright                  " To make vsplit put the new buffer on the right of the current buffer
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -80,106 +81,133 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'sjl/gundo.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'fisadev/vim-isort'      " Vim plugin to sort python imports
+" Plugin 'severin-lemaignan/vim-minimap'
 
 " Color settings
 syntax on                       " Show colors
 set background=dark
-colorscheme vividchalk
+colorscheme luthadel
 set t_Co=256
 
 " Keymap settings
 " nnoremap n:normal mode, nore:no recursive, map:map
-nnoremap    <leader>2   :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
-" Type \2 to show tabs and spaces
-nnoremap    <leader>3   :set invpaste paste?<CR>
-" Type \3 to enable/disable paste mode
-nnoremap    <leader>4   :set invnumber<CR>
-" Type \4 to show/not show line numbers
-nnoremap    <leader>5   :set hls!<CR>:set hls?<CR>
-" Type \5 to highlight/not highlight search results
-nnoremap    <leader>6   :set ignorecase!<CR>:set ignorecase?<CR>
-" Type \6 to search keyword with case ignorance
-nnoremap    <leader>7   :TagbarToggle<CR>
-" Type \7 to open tagbar
-nnoremap    <leader>8   :Autoformat<CR>
-" Type \8 to autoformat C
-nnoremap    <leader>v   :e ~/.vimrc
-" Type \v then press enter to edit ~/.vimrc
-nnoremap    <leader>t   :e ~/.tmux.conf
-" Type \t then press enter to edit ~/.tmux.conf
-nnoremap    <leader>b   :e ~/.bashrc
-" Type \b then press enter to edit ~/.bashrc
-nnoremap    <leader>ev  :vsplit $MYVIMRC<cr>
-" Type \ev to edit ~/.vimrc in spit panel
-nnoremap    <leader>sv  :source $MYVIMRC<cr>
-" Type \sv to source ~/.vimrc
-nnoremap    <leader>"   viw<esc>a"<esc>hbi"<esc>lbl
-" Type \" to double quote one word
-nnoremap    <leader>'   viw<esc>a'<esc>hbi'<esc>lbl
-" Type \' to single quote one word
-nnoremap    <leader>l"  ^i"<esc>$a"<esc>^
-" Type \l" to double quote one line
-nnoremap    <leader>l'  ^i'<esc>$a'<esc>^
-" Type \l' to single quote one line
-nnoremap    <leader><Left>  :tabprevious<CR>
-" Type \<Left> to switch to previous tab
-nnoremap    <leader><Right> :tabnext<CR>
-" Type \<Right> to switch next tab
-nnoremap    <leader>t   :tabnew<CR>
-" Type \t to open a new tab and edit a new file
-nnoremap    <leader>gn  :NERDTreeToggle<CR>
-" Type \n to open NERDTree
-nnoremap    <leader>p   :CtrlP<CR>
-" Type \p to open CtrlP
-nnoremap    <leader>pd  :CtrlPDir ~<CR>
-" Type \pd to open CtrlPDir [Ctrl + f/b to cycle between modes]
-nnoremap    <leader>u   viwu<esc>
-" Type \u to convert to lower case
-nnoremap    <leader>U   viwU<esc>
-" Type \U to convert to UPPER case
-nnoremap    <space> za
-" Type space to fold/unfold
-nnoremap    <Leader>r   :retab<CR>
-" Type \r to retab
-nnoremap    <Leader>it  "=strftime("%c")<CR>P
-" Type \it to insert timestamp
-nnoremap    <Leader>tn  :ToggleNumber<CR>
-" Type \tn to change number mode
-nnoremap    <Leader>idf :IndentLinesToggle<CR>
-" Type \idf to turn on or off the indent lines
-nnoremap    <Leader>sc  :set spell spelllang=en_us<CR>
-" Type \sc for spell checking
-nnoremap    <Leader>nsc :set nospell<CR>
-" Type \nsc to turn off checking
-nnoremap    <Leader>fp  gq<CR>
-" Type \fp to reformat paragraph
-nnoremap    <Leader>sx  :call Parse()<CR>
-" Type \sx to parse info (18z/infoparser)
-nnoremap    <leader>fs  :call cscope#find('s', expand('<cword>'))<CR>
-" s: Find this C symbol
-nnoremap    <leader>fg  :call cscope#find('g', expand('<cword>'))<CR>
-" g: Find this definition
-nnoremap    <leader>fd  :call cscope#find('d', expand('<cword>'))<CR>
-" d: Find functions called by this function
-nnoremap    <leader>fc  :call cscope#find('c', expand('<cword>'))<CR>
-" c: Find functions calling this function
-nnoremap    <leader>ft  :call cscope#find('t', expand('<cword>'))<CR>
-" t: Find this text string
-nnoremap    <leader>fe  :call cscope#find('e', expand('<cword>'))<CR>
-" e: Find this egrep pattern
-nnoremap    <leader>ff  :call cscope#find('f', expand('<cword>'))<CR>
-" f: Find this file
-nnoremap    <leader>fi  :call cscope#find('i', expand('<cword>'))<CR>
-" i: Find files #including this file
-nnoremap    <leader>o   :!echo `git url`/blob/`git rev-parse --abbrev-ref HEAD`/%\#L<C-R>=line('.')<CR> \| xargs firefox<CR><CR>
-" open line in github
-nnoremap    <leader>i   :!isort %<CR><CR>
-" sort imports alphabetically
 
-vnoremap    . :norm.<CR>
+" Type \2 to show tabs and spaces
+nnoremap    <leader>2   :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
+
+" Type \3 to enable/disable paste mode
+nnoremap    <leader>3   :set invpaste paste?<CR>
+
+" Type \4 to show/not show line numbers
+nnoremap    <leader>4   :set invnumber<CR>
+
+" Type \43 to change number mode
+nnoremap    <Leader>43  :ToggleNumber<CR>
+
+" Type \5 to highlight/not highlight search results
+nnoremap    <leader>5   :set hls!<CR>:set hls?<CR>
+
+" Type \6 to search keyword with case ignorance
+nnoremap    <leader>6   :set ignorecase!<CR>:set ignorecase?<CR>
+
+" Type \7 to open tagbar
+nnoremap    <leader>7   :TagbarToggle<CR>
+
+" Type \8 to autoformat C
+nnoremap    <leader>8   :Autoformat<CR>
+
+" Type \v then press enter to edit ~/.vimrc
+nnoremap    <leader>v   :e ~/.vimrc
+
+" Type \t then press enter to edit ~/.tmux.conf
+nnoremap    <leader>t   :e ~/.tmux.conf
+
+" Type \b then press enter to edit ~/.bashrc
+nnoremap    <leader>b   :e ~/.bashrc
+
+" Type \ev to edit ~/.vimrc in spit panel
+nnoremap    <leader>ev  :vsplit $MYVIMRC<cr>
+
+" Type \sv to source ~/.vimrc
+nnoremap    <leader>sv  :source $MYVIMRC<cr>
+
+" Type \" to double quote one word
+nnoremap    <leader>"   viw<esc>a"<esc>hbi"<esc>lbl
+
+" Type \' to single quote one word
+nnoremap    <leader>'   viw<esc>a'<esc>hbi'<esc>lbl
+
+" Type \l" to double quote one line
+nnoremap    <leader>l"  ^i"<esc>$a"<esc>^
+
+" Type \l' to single quote one line
+nnoremap    <leader>l'  ^i'<esc>$a'<esc>^
+
+" Type \n to open NERDTree
+nnoremap    <leader>gn  :NERDTreeToggle<CR>
+
+" Type \p to open CtrlP
+nnoremap    <leader>p   :CtrlP<CR>
+
+" Type \pd to open CtrlPDir [Ctrl + f/b to cycle between modes]
+nnoremap    <leader>pd  :CtrlPDir ~<CR>
+
+" Type \u to convert to lower case
+nnoremap    <leader>u   viwu<esc>
+
+" Type \U to convert to UPPER case
+nnoremap    <leader>U   viwU<esc>
+
+" Type space to fold/unfold
+nnoremap    <space> za
+
+" Type \r to retab
+nnoremap    <Leader>r   :retab<CR>
+
+" Type \it to insert timestamp
+nnoremap    <Leader>it  "=strftime("%c")<CR>P
+
+" Type \idf to turn on or off the indent lines
+nnoremap    <Leader>idf :IndentLinesToggle<CR>
+
+" Type \sc for spell checking
+nnoremap    <Leader>sc  :set spell spelllang=en_us<CR>
+" Type \nsc to turn off checking
+nnoremap    <Leader>nsc :set nospell<CR>
+
+" Type \fp to reformat paragraph
+nnoremap    <Leader>fp  gq<CR>
+
+" Type \sx to parse info (18z/infoparser)
+nnoremap    <Leader>sx  :call Parse()<CR>
+
+" s: Find this C symbol
+nnoremap    <leader>fs  :call cscope#find('s', expand('<cword>'))<CR>
+" g: Find this definition
+nnoremap    <leader>fg  :call cscope#find('g', expand('<cword>'))<CR>
+" d: Find functions called by this function
+nnoremap    <leader>fd  :call cscope#find('d', expand('<cword>'))<CR>
+" c: Find functions calling this function
+nnoremap    <leader>fc  :call cscope#find('c', expand('<cword>'))<CR>
+" t: Find this text string
+nnoremap    <leader>ft  :call cscope#find('t', expand('<cword>'))<CR>
+" e: Find this egrep pattern
+nnoremap    <leader>fe  :call cscope#find('e', expand('<cword>'))<CR>
+" f: Find this file
+nnoremap    <leader>ff  :call cscope#find('f', expand('<cword>'))<CR>
+" i: Find files #including this file
+nnoremap    <leader>fi  :call cscope#find('i', expand('<cword>'))<CR>
+
+" open line in github
+nnoremap    <leader>o   :!echo `git url`/blob/`git rev-parse --abbrev-ref HEAD`/%\#L<C-R>=line('.')<CR> \| xargs firefox<CR><CR>
+
+" sort imports alphabetically
+nnoremap    <leader>i :!isort %<CR><CR>
+
 " Type . to apply the . command to execute a stored action
 " against the selection. The “.” allows us to simply
 " re-execute that last command
+vnoremap    . :norm.<CR>
 
 " Type \jp to preview formatted json
 " Type \jw to write formatted json
@@ -209,6 +237,7 @@ augroup filetype_python
     autocmd FileType python set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
     autocmd FileType python :call CheckAndLoadTags()
     autocmd FileType python TagbarOpen
+    " autocmd FileType python NERDTree
     autocmd FileType python iabbrev pythonHead #!/usr/bin/env python<cr># -*- coding: utf-8 -*-<cr>
 augroup END
 
@@ -258,7 +287,7 @@ autocmd BufWritePre * :%s/\s\+$//e
 autocmd BufWritePre * :retab
 
 " auto format C, python files upon saving
-autocmd BufWrite * :Autoformat
+" autocmd BufWrite * :Autoformat
 "
 " auto format Python upon saving the file
 " autocmd BufWritePost *.py :PyFlakeAuto
