@@ -1,6 +1,7 @@
 * \2 開燈並按 tab 鍵。
 * \3 開啟剪貼漂亮模式。
 * \4 開啟行數顯示。
+* \43 開啟相對行數模式
 * \5 搜尋某個關鍵字，並高亮之。
 test
 test search test
@@ -18,20 +19,14 @@ test search test
 * \l" 雙引號行
 * \l' 單引號行
 
-可用 tmux 替代
-* \t 開啟新 tab
-* \<left> 跳至左 tab
-* \<right> 跳至右 tab
 
 * \gn 開啟支援 git 的 nerdtree
 * \p 開啟快速搜尋,類似 everything
-* \pd 似乎可拿掉
 
 * \u 將大寫轉小寫
 * \U 將小寫轉大寫
 
 * \it insert timestamp
-* \43 開啟相對行數模式
 
 * \idf 移除或顯示 indent 輔助線
 * \sc 錯字檢查
@@ -59,5 +54,3 @@ q 停止錄
 選了後用 ctrl +n 尋找同樣字串
 接著按 shift + i 後
 就可以開始改字串了
-
-* gundo 似乎可以拿掉了
