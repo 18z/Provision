@@ -18,8 +18,7 @@
     ln -sf ${HOME}/Provision/vim/vimrc ${HOME}/.vimrc
 
 # Install color scheme
-    mkdir -p ${HOME}/.vim/colors
-    ln -sf ${HOME}/Provision/vim/colors/ ${HOME}/.vim/colors
+    ln -sf ${HOME}/Provision/vim/colors ${HOME}/.vim/
 
 # Vundle installation
     if [ ! -d "${HOME}/.vim/bundle/Vundle.vim" ]; then
