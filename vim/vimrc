@@ -242,7 +242,7 @@ augroup END
 " autocmd for bash
 augroup filetype_bash
     autocmd!
-    autocmd BufRead,BufNewFile *.sh set filetype=bash
+    " autocmd BufRead,BufNewFile *.sh set filetype=bash
     autocmd FileType bash set tabstop=4
     autocmd FileType bash set shiftwidth=4
     autocmd FileType bash set expandtab
