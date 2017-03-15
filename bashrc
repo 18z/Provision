@@ -29,6 +29,8 @@ alias pp="column -s ';' -t"
 alias ppp="column -s ':' -t"
 alias cdp="cd $OLDPWD"
 alias rmpyc="find -name "*.pyc" -exec rm {} \;"
+alias s="source bin/activate"
+alias d="deactivate"
 
 function backup()
 {
