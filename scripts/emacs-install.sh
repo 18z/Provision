@@ -8,5 +8,5 @@ set -x
 # Install config files
 if [ ! -d "${HOME}/.emacs.d" ]; then
     cd ${HOME}
-    git clone https://github.com/18z/emacs_config.git
+    git clone https://github.com/18z/emacs_config.git ~/.emacs.d
 fi
