@@ -9,7 +9,7 @@ To provision working environment with these settings:
 
 ```
 $ sudo apt-add-repository ppa:ubuntu-elisp/ppa
-$ sudo apt-get update; sudo apt-get install git curl tmux emacs-snapshot cscope tig vim ibus-chewing
+$ sudo apt-get update; sudo apt-get install git curl tmux emacs-snapshot cscope tig vim ibus-chewing exuberant-ctags
 ```
 
 * VIM Configurations
