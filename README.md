@@ -1,6 +1,3 @@
-Provisioning Work Env.
-=========
-
 These are settings that I feel comfortable to work with.
 
 To provision working environment with these settings:
@@ -42,5 +39,9 @@ $ curl -o - https://raw.githubusercontent.com/deanboole/Provision/master/scripts
 $ curl -o - https://raw.githubusercontent.com/deanboole/Provision/master/scripts/emacs-install.sh | sh
 ```
 
+* radare2 Installation
+```bash
+$ curl -o - https://raw.githubusercontent.com/deanboole/Provision/master/scripts/radare2-install.sh | sh
+```
 
 [download tmux](https://packages.debian.org/wheezy-backports/tmux)
