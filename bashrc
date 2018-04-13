@@ -31,6 +31,8 @@ alias cdp="cd $OLDPWD"
 alias rmpyc="find -name "*.pyc" -exec rm {} \;"
 alias s="source bin/activate"
 alias d="deactivate"
+alias jadx="/home/dio/Documents/re-env/jadx/build/jadx/bin/jadx-gui"
+alias as="/opt/android-studio/bin/studio.sh"
 
 function backup()
 {
